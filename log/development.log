@@ -3941,3 +3941,14 @@ Processing by HomeController#privacy as HTML
 Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/privacy" for 78.100.201.225 at 2019-04-13 15:35:41 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by HomeController#privacy as HTML
+  Rendering home/privacy.html.erb within layouts/application
+  Rendered home/privacy.html.erb within layouts/application (3.0ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 180ms (Views: 172.1ms | ActiveRecord: 0.0ms)
+
+
