@@ -3430,3 +3430,455 @@ Processing by EmployeesController#index as HTML
 Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 78.100.201.225 at 2019-04-13 13:04:45 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 191ms (Views: 182.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-13 13:06:17 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial partials/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/Submitted Phase3/phase3/app/views"
+):
+    90: 		        Buthayna AlMulla
+    91:     		  </div>
+    92: 	    	  <div class="col-md-8">
+    93: 	    	    <%= render partial: 'partials/footer' %>
+    94:   		    </div>
+    95: 	  	    <div class="col-md-2">
+    96:   	  	  </div>
+  
+app/views/layouts/application.html.erb:93:in `_app_views_layouts_application_html_erb___2477489035284300424_70007295957880'
+Started GET "/" for 78.100.201.225 at 2019-04-13 13:07:11 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (1.6ms)
+  Rendered home/home.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial partials/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/Submitted Phase3/phase3/app/views"
+):
+    86: 
+    87: <footer>
+    88:       <div class="small-12 columns" id="footer">
+    89:         <%= render partial: 'partials/footer' %>
+    90:       </div>
+    91:     </footer>    
+    92:     
+  
+app/views/layouts/application.html.erb:89:in `_app_views_layouts_application_html_erb___2477489035284300424_70007379799820'
+Started GET "/" for 78.100.201.225 at 2019-04-13 13:07:26 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments" for 78.100.201.225 at 2019-04-13 13:10:47 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:20
+  Rendered assignments/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 194ms (Views: 168.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assignments" for 78.100.201.225 at 2019-04-13 13:10:54 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:20
+  Rendered assignments/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-13 13:10:56 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-13 13:10:57 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-13 13:11:49 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-13 13:12:22 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:12:24 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 78.100.201.225 at 2019-04-13 13:12:26 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 78.100.201.225 at 2019-04-13 13:12:28 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#contact as HTML
+  Rendering home/contact.html.erb within layouts/application
+  Rendered home/contact.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/privacy" for 78.100.201.225 at 2019-04-13 13:12:42 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#privacy as HTML
+  Rendering home/privacy.html.erb within layouts/application
+  Rendered home/privacy.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 78.100.201.225 at 2019-04-13 13:13:28 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:13:43 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:16:46 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 333ms (Views: 292.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:16:46 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:20:51 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.5ms)
+  Rendered home/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:20:52 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:22:50 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.5ms)
+  Rendered home/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:22:51 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:24:42 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:24:42 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:25:30 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:25:31 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-13 13:25:33 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  Rendered employees/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 53ms (Views: 35.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-13 13:25:43 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  Rendered employees/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 78.100.201.225 at 2019-04-13 13:25:46 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (36.6ms)
+  Rendered employees/new.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 64ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees/new" for 78.100.201.225 at 2019-04-13 13:26:40 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (4.6ms)
+  Rendered employees/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:26:42 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:27:43 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-13 13:27:46 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:24
+  Rendered stores/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 54ms (Views: 33.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-13 13:27:50 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:24
+  Rendered stores/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/new" for 78.100.201.225 at 2019-04-13 13:27:53 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/_form.html.erb (5.1ms)
+  Rendered stores/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores/new" for 78.100.201.225 at 2019-04-13 13:28:49 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/_form.html.erb (4.6ms)
+  Rendered stores/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments" for 78.100.201.225 at 2019-04-13 13:28:51 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:20
+  Rendered assignments/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 38ms (Views: 23.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assignments" for 78.100.201.225 at 2019-04-13 13:28:56 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:20
+  Rendered assignments/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assignments/new" for 78.100.201.225 at 2019-04-13 13:28:58 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (4.4ms)
+  Rendered assignments/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 37ms (Views: 26.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assignments/new" for 78.100.201.225 at 2019-04-13 13:32:17 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (3.5ms)
+  Rendered assignments/new.html.erb within layouts/application (5.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-13 13:32:21 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  Rendered employees/index.html.erb within layouts/application (6.2ms)
+  Rendered partials/_nav.html.erb (1.3ms)
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-13 13:32:30 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  Rendered employees/index.html.erb within layouts/application (4.2ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assignments/new" for 78.100.201.225 at 2019-04-13 13:32:33 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (3.2ms)
+  Rendered assignments/new.html.erb within layouts/application (5.0ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 78.100.201.225 at 2019-04-13 13:37:51 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (2.4ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 193ms (Views: 185.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-13 13:37:56 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  Rendered employees/index.html.erb within layouts/application (11.8ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 38ms (Views: 28.3ms | ActiveRecord: 1.0ms)
+
+

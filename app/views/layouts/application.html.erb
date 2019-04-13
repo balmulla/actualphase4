@@ -39,34 +39,7 @@
     		<div class="col-md-2 bg-dark">
 		    </div>
 		    <div class="col-md-8 bg-dark">
-
-          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            
-                <li class="nav-item">
-                  <a class="nav-link" href="<%= employees_path%>">List Employees</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link" href="<%=new_employee_path%>">New Employee</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link" href="<%= stores_path%>">List Stores</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link" href="<%=new_store_path%>">New Store</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link" href="<%= assignments_path%>">List Assignments</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link" href="<%=new_assignment_path%>">New Assignment</a>
-                </li>
-          </nav>
-          <br>		  
+		      <%= render :partial => "partials/nav" %>
 	      </div>
 		    <div class="col-md-2 bg-dark">
 		    </div>
@@ -82,14 +55,18 @@
 		    <div class="col-md-2">
 		    </div>
 	    </div>
-    
+
     
       <div class="footer fixed-bottom"> 
 	      <div class="row"> 
 	        <div class="col-md-2 text-center">
 		        Buthayna AlMulla
     		  </div>
-	    	  <div class="col-md-8">
+	    	  <div class="col-md-8 text-center">
+	    	    	<%= link_to 'Home', home_path %>&nbsp;&nbsp;::&nbsp;&nbsp;
+              <%= link_to 'About the Creamery', about_path %>&nbsp;&nbsp;::&nbsp;&nbsp;
+            	<%= link_to 'Contact Us', contact_path %>&nbsp;&nbsp;::&nbsp;&nbsp;
+            	<%= link_to 'Privacy Policy', privacy_path %>
   		    </div>
 	  	    <div class="col-md-2">
   	  	  </div>
