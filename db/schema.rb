@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_18_065246) do
+ActiveRecord::Schema.define(version: 2019_04_13_153901) do
 
   create_table "assignments", force: :cascade do |t|
     t.integer "store_id"
@@ -44,6 +44,14 @@ ActiveRecord::Schema.define(version: 2019_03_18_065246) do
     t.float "latitude"
     t.float "longitude"
     t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.integer "employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

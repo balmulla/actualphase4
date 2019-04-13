@@ -6,6 +6,8 @@ class Employee < ApplicationRecord
   # Relationships
   has_many :assignments
   has_many :stores, through: :assignments
+  has_one :user
+  accepts_nested_attributes_for :user
   
   # Validations
   validates_presence_of :first_name, :last_name, :date_of_birth, :ssn, :role
@@ -49,6 +51,14 @@ class Employee < ApplicationRecord
   def age
     (Time.now.to_s(:number).to_i - date_of_birth.to_time.to_s(:number).to_i)/10e9.to_i
   end
+  
+  # def active?
+  #   @result = false
+  #   if self.active
+  #     @result=true
+  #   end
+  #   @result
+  # end
   
   # Misc Constants
   ROLES_LIST = [['Employee', 'employee'],['Manager', 'manager'],['Administrator', 'admin']]

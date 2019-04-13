@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Employees</h1>
-
 <%= link_to 'New Employee', new_employee_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info"%>
 
-<table class="table table-striped">
+<table class="table table-striped" style="font-size:60%;">
   <thead>
     <tr>
         <th>ID</th>
@@ -15,6 +14,7 @@
         <th>phone</th>
         <th>role</th>
         <th>active</th>
+        <th>email</th>
         <th></th>
         <th></th>
         <th></th>
@@ -32,6 +32,9 @@
         <td><%= employee.phone %></td>
         <td><%= employee.role %></td>
         <td><%= employee.active %></td>
+        <td><% if employee.user.present? %> 
+                 <%= employee.user.email %>
+            <% end %></td>
         <td><%= link_to 'Show', employee %></td>
         <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
         <td><%= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
