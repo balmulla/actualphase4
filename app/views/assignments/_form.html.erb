@@ -1,0 +1,57 @@
+<%= form_with(model: assignment, local: true, :html => {:style =>"position:absolute; TOP:135px; LEFT:170px;font-size:160%;"}) do |form| %>
+  <% if assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assignment.errors.count, "error") %> prohibited this assignment from being saved:</h2>
+
+      <ul>
+      <% assignment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table class="table">
+  <tr>
+  <div class="field ">
+    <%= form.label :store_id, "Store ID", :style => "position:relative;" %>
+    <%= form.text_field :store_id, id: :assignment_store_id, :style => "position:relative;" %>
+  </div>
+  </tr>
+  
+  <tr>
+  <div class="field">
+    <%= form.label :employee_id, "Employee ID",  :style => "position:relative;"  %>
+    <%= form.text_field :employee_id, id: :assignment_employee_id, :style => "position:relative; " %>
+  </div>
+  </tr>
+  
+  <tr>
+  <div class="field">
+    <%= form.label :start_date, :style => "position:relative;"  %> 
+    <%= form.date_field :start_date, id: :assignment_start_date, :style => "position:relative; " %>
+  </div>  
+  </tr>
+  
+  <tr>
+  <div class="field">
+    <%= form.label :end_date, :style => "position:relative;"  %>
+    <%= form.date_field :end_date, id: :assignment_end_date, :style => "position:relative; "  %>
+  </div>
+  </tr>
+  
+  <tr>
+  <div class="field ">
+    <%= form.label :pay_level, :style => "position:relative;"  %> 
+    <%= form.text_field :pay_level, id: :assignment_pay_level, :style => "position:relative; " %>
+  </div>
+  </tr>
+    
+  
+</table>
+  <div class="actions">
+    <%= form.submit "save", :class => 'btn btn-secondary' %>
+  </div>
+
+
+<% end %>

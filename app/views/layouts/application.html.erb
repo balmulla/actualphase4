@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Phase3Starter</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <!-- Required meta tags -->
+    <!--<meta charset="utf-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row" style="height: 180px; background-color: #eee;">
+    		<div class="col-md-2">
+		      <%= image_tag("logo.png", :alt => "rss feed", :class => "img-fluid") %>
+		    </div>
+		    <div class="col-md-8">
+			    <div class="text-center">
+				    <h1 class="display-3"> The Amazing & Marvelous Creamery</h1>
+			    </div>
+		    </div>
+		    <div class="col-md-2">
+		      <!--image from https://ya-webdesign.com-->
+			    <%= image_tag("logo.png", :alt => "rss feed", :class => "img-fluid") %>
+		    </div>
+	    </div>
+	    
+	    <!--navbar-->
+	    <div class="row">
+    		<div class="col-md-2 bg-dark">
+		    </div>
+		    <div class="col-md-8 bg-dark">
+
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="<%= employees_path%>">List Employees</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="<%=new_employee_path%>">New Employee</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="<%= stores_path%>">List Stores</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="<%=new_store_path%>">New Store</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="<%= assignments_path%>">List Assignments</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="<%=new_assignment_path%>">New Assignment</a>
+                </li>
+          </nav>
+          <br>		  
+	      </div>
+		    <div class="col-md-2 bg-dark">
+		    </div>
+		  </div>
+
+	    
+    	<div class="row">
+		    <div class="col-md-2">
+		    </div>
+		    <div class="col-md-8">
+          <%= yield %>
+		    </div>
+		    <div class="col-md-2">
+		    </div>
+	    </div>
+    
+    
+      <div class="footer fixed-bottom"> 
+	      <div class="row"> 
+	        <div class="col-md-2 text-center">
+		        Buthayna AlMulla
+    		  </div>
+	    	  <div class="col-md-8">
+  		    </div>
+	  	    <div class="col-md-2">
+  	  	  </div>
+	       </div>
+      </div>
+    </div>
+    
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  </body>
+</html>

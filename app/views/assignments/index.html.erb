@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assignments</h1>
+<%= link_to 'New Assignment', new_assignment_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info" %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th>Store ID</th>
+        <th>Employee ID</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Pay Level</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assignments.each do |assignment| %>
+      <tr>
+        <td><%= assignment.store_id %></td>
+        <td><%= assignment.employee_id %></td>
+        <td><%= assignment.start_date %></td>
+        <td><%= assignment.end_date %></td>
+        <td><%= assignment.pay_level %></td>
+        <td><%= link_to 'Show', assignment %></td>
+        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+        <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
