@@ -1,40 +1,38 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="<%= home_path%>">Home</a>
-                </li>
-              
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Employees
-                  </a>
-                  
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="<%= employees_path%>">List Employees</a>
-                    <a class="dropdown-item" href="<%=new_employee_path%>">New Employee</a>
-                  </div>
-                </li>
-                
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Stores
-                  </a>
-                  
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="<%= stores_path%>">List Stores</a>
-                    <a class="dropdown-item" href="<%=new_store_path%>">New Store</a>
-                  </div>
-                </li>
-                
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Assignments
-                  </a>
-                  
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="<%= assignments_path%>">List Assignments</a>
-                    <a class="dropdown-item" href="<%=new_assignment_path%>">New Assignments</a>
-                  </div>
-                </li>
-              </ul>
-          </nav>
+<div class="contain-to-grid">
+  <nav class="top-bar" data-topbar role="navigation"> 
+    <section class="top-bar-section">
+      <ul class="left">
+        <!-- link to home -->
+        <li><%= link_to "Home", home_path %></li>
+
+        <!-- options for stores -->
+        <li class="has-dropdown">
+          <%= link_to "Stores", stores_path %>
+          <ul class="dropdown">
+            <li><%= link_to "Store List", stores_path %></li>
+            <li><%= link_to "Add a Store", new_store_path %></li>
+          </ul>
+        </li>
+
+        <!-- options for employees -->
+        <li class="has-dropdown">
+          <%= link_to "Employees", employees_path %>
+          <ul class="dropdown">
+            <li><%= link_to "Employee List", employees_path %></li>
+            <li><%= link_to "Add an Employee", new_employee_path %></li>
+          </ul>
+        </li>
+
+        <!-- options for assignments -->
+        <li class="has-dropdown">
+          <%= link_to "Assignments", assignments_path %>
+          <ul class="dropdown">
+            <li><%= link_to "Assignments List", assignments_path %></li>
+            <li><%= link_to "Create New Assignment", new_assignment_path %></li>
+          </ul>
+        </li>
+      </ul>
+
+    </section>
+  </nav>
+</div>

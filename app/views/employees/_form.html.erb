@@ -1,6 +1,7 @@
-<%= form_with(model: employee, local: true, :html => {:style =>"position:absolute; TOP:135px; LEFT:170px;font-size:160%;"}) do |form| %>
 
+<%= form_with(model: employee, local: true, :html => {:style =>"position:absolute; TOP:135px; LEFT:170px;font-size:160%;"}) do |form| %>
   <% if employee.errors.any? %>
+  <div>
     <div id="error_explanation">
     <h6 style="color:red;"><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h6>
 
@@ -10,8 +11,8 @@
     <% end %>
     </ul>
     </div>
+    </div>
   <% end %>
-
 
 <table class="table">
   <tr>

@@ -1,5 +1,6 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, :only => [:index, :show]
 
   # GET /employees
   # GET /employees.json
@@ -15,11 +16,22 @@ class EmployeesController < ApplicationController
   # GET /employees/new
   def new
     @employee = Employee.new
+    # echo params(user_attributes: [:email])
+    # if params(user_attributes: [:email]) == nil 
+    #   respond_to do |format|
+    #     if @employee.save
+    #       format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
+    #       format.json { render :show, status: :created, location: @employee }
+    #     end
+    #   end
+    # else
     @employee.build_user
+    # end
   end
 
   # GET /employees/1/edit
   def edit
+    @employee.build_user
   end
 
   # POST /employees

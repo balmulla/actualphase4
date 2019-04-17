@@ -7,6 +7,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    
     
     <!-- Required meta tags -->
     <!--<meta charset="utf-8">-->
@@ -14,6 +16,7 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
 
   </head>
 
@@ -39,8 +42,14 @@
     		<div class="col-md-2 bg-dark">
 		    </div>
 		    <div class="col-md-8 bg-dark">
+
+
+
+
 		      <%= render :partial => "partials/nav" %>
-	      </div>
+
+
+	  		</div>
 		    <div class="col-md-2 bg-dark">
 		    </div>
 		  </div>
