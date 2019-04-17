@@ -1,7 +1,7 @@
 
 <%= form_with(model: employee, local: true, :html => {:style =>"position:absolute; TOP:135px; LEFT:170px;font-size:160%;"}) do |form| %>
   <% if employee.errors.any? %>
-  <div>
+  <div class="col-md-6">
     <div id="error_explanation">
     <h6 style="color:red;"><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h6>
 
@@ -14,77 +14,79 @@
     </div>
   <% end %>
 
-<table class="table">
-  <tr>
+
+<div class="col-md-6">
   <div class="field ">
     <%= form.label :first_name, :style => "position:relative;" %>
     <%= form.text_field :first_name, id: :employee_first_name, :style => "position:relative;" %>
     <!--LEFT:160px;-->
   </div>
-  </tr>
+
   
-  <tr>
+
   <div class="field">
     <%= form.label :last_name, :style => "position:relative;"  %>
     <%= form.text_field :last_name, id: :employee_last_name, :style => "position:relative; " %>
   </div>
-  </tr>
+
   
-  <tr>
+
   <div class="field">
     <%= form.label :ssn, :style => "position:relative;"  %> 
     <%= form.text_field :ssn, id: :employee_ssn, :style => "position:relative; " %>
   </div>  
-  </tr>
+
   
-  <tr>
+
   <div class="field">
     <%= form.label :date_of_birth, :style => "position:relative;"  %>
     <%= form.date_field :date_of_birth, id: :employee_date_of_birth, :style => "position:relative; "  %>
   </div>
-  </tr>
+
   
-  <tr>
+
   <div class="field ">
     <%= form.label :phone, :style => "position:relative;"  %> 
     <%= form.text_field :phone, id: :employee_phone, :style => "position:relative; " %>
   </div>
-  </tr>
+
     
-  <tr>
+
   <div class="field ">
     <%= form.label :role, :style => "position:relative;"  %>
     <%= form.text_field :role, id: :employee_role, :style => "position:relative; " %>
   </div>
-  </tr>
+
   
-  <tr>
+
   <div class="field ">
     <%= form.label :active, :style => "position:relative;"  %>
     <%= form.text_field :active, id: :employee_active, :style => "position:relative; " %>
   </div>
-  </tr>
+
   
   <%= form.fields_for :user do |feild| %>
-  <tr>
+
   <div class="field ">
     <%= feild.label :email, :style => "position:relative;"  %>
     <%= feild.text_field :email, id: :user_email, :style => "position:relative; " %>
   </div>
-  </tr>
-  <tr>
+
   <div class="field ">
     <%= feild.label :password, :style => "position:relative;"  %>
     <%= feild.password_field :password, id: :user_password, :style => "position:relative; " %>
   </div>
-  </tr>
+
   
   <% end %>
   
-</table>
+<br>
   <div class="actions">
     <%= form.submit "save", :class => 'btn btn-secondary' %>
   </div>
 <% end %>
+<br>
+<br>
 
+</div>
 
