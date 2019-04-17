@@ -11435,3 +11435,71 @@ Processing by AssignmentsController#index as HTML
 Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 78.100.201.225 at 2019-04-17 19:20:16 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (2.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 180ms (Views: 171.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-17 19:20:17 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.5ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-17 19:20:19 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 13], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  Rendered employees/index.html.erb within layouts/application (186.0ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 215ms (Views: 202.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/employees/new" for 78.100.201.225 at 2019-04-17 19:20:22 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (11.0ms)
+  Rendered employees/new.html.erb within layouts/application (12.6ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 78.100.201.225 at 2019-04-17 19:20:25 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b1O8dMomvD/NeUFvCYMg5uRkRugJtIRm3uoKwQQlTWUVzGTLo39MKTEYF5y1mh62A8rBlYbIZYDxaUss05dp+A==", "employee"=>{"first_name"=>"", "last_name"=>"", "ssn"=>"", "date_of_birth"=>"", "phone"=>"", "role"=>"", "active"=>"", "user_attributes"=>{"email"=>"", "password"=>"[FILTERED]"}}, "commit"=>"save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:33
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", ""], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/employees_controller.rb:33
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (11.4ms)
+  Rendered employees/new.html.erb within layouts/application (13.3ms)
+  Rendered partials/_nav.html.erb (1.8ms)
+Completed 200 OK in 80ms (Views: 49.5ms | ActiveRecord: 1.6ms)
+
+
