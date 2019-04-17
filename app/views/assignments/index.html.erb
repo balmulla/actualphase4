@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+        <th>Assignment ID</th>
         <th>Store ID</th>
         <th>Employee ID</th>
         <th>Start Date</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @assignments.each do |assignment| %>
       <tr>
+        <td><%= assignment.id %></td>
         <td><%= assignment.store_id %></td>
         <td><%= assignment.employee_id %></td>
         <td><%= assignment.start_date %></td>

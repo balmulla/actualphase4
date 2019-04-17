@@ -6,6 +6,7 @@ class Employee < ApplicationRecord
   # Relationships
   has_many :assignments
   has_many :stores, through: :assignments
+  has_many :shifts, through: :assignments
   has_one :user
   accepts_nested_attributes_for :user
   
