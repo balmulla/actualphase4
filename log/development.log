@@ -14102,3 +14102,1405 @@ Processing by ShiftsController#index as HTML
 Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.3ms)
 
 
+  [1m[36mShift Load (0.9ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" ORDER BY "shifts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShift Update (0.6ms)[0m  [1m[33mUPDATE "shifts" SET "start_time" = ?, "updated_at" = ? WHERE "shifts"."id" = ?[0m  [["start_time", "2000-01-01 20:28:36.896227"], ["updated_at", "2019-04-18 20:28:36.898822"], ["id", 12]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShift Update (0.6ms)[0m  [1m[33mUPDATE "shifts" SET "end_time" = ?, "updated_at" = ? WHERE "shifts"."id" = ?[0m  [["end_time", "2000-01-01 20:29:01.059358"], ["updated_at", "2019-04-18 20:29:01.061068"], ["id", 12]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShift Update (0.5ms)[0m  [1m[33mUPDATE "shifts" SET "start_time" = ?, "updated_at" = ? WHERE "shifts"."id" = ?[0m  [["start_time", "2000-01-01 20:29:17.116488"], ["updated_at", "2019-04-18 20:29:17.117752"], ["id", 12]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" ORDER BY "shifts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShift Update (0.5ms)[0m  [1m[33mUPDATE "shifts" SET "start_time" = ?, "updated_at" = ? WHERE "shifts"."id" = ?[0m  [["start_time", "2000-01-01 20:30:55.418536"], ["updated_at", "2019-04-18 20:30:55.420591"], ["id", 12]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 78.100.201.225 at 2019-04-18 20:31:54 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (2.3ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 206ms (Views: 197.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-18 20:31:56 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.5ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:32:11 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (38.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 77ms (Views: 64.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/shifts/12/edit" for 78.100.201.225 at 2019-04-18 20:32:15 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mShift Load (0.7ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  Rendering shifts/edit.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (90.8ms)
+  Rendered shifts/edit.html.erb within layouts/application (94.3ms)
+  Rendered partials/_nav.html.erb (1.7ms)
+Completed 200 OK in 181ms (Views: 170.5ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/shifts/12" for 78.100.201.225 at 2019-04-18 20:32:20 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kzbidJiME9JTO04zt5nNEpPWO9C6NFicNqYRCR4jyecvf2eHzdGxLHaQ57cQjaTemmZrY5PlJ8N8vbW4KgneYQ==", "shift"=>{"assignment_id"=>"3", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"10", "start_time(1i)"=>"2000", "start_time(2i)"=>"1", "start_time(3i)"=>"1", "start_time(4i)"=>"20", "start_time(5i)"=>"30", "end_time(1i)"=>"2000", "end_time(2i)"=>"1", "end_time(3i)"=>"1", "end_time(4i)"=>"20", "end_time(5i)"=>"29", "notes"=>""}, "commit"=>"Update Shift", "id"=>"12"}
+  [1m[36mShift Load (1.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:44
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/shifts_controller.rb:44
+  Rendering shifts/edit.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (39.5ms)
+  Rendered shifts/edit.html.erb within layouts/application (41.5ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 214ms (Views: 156.5ms | ActiveRecord: 3.4ms)
+
+
+Started PATCH "/shifts/12" for 78.100.201.225 at 2019-04-18 20:33:22 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8yrAcBg5TBcqZ0pNNxTTkExRqJxffu2lTcRZ/SP8BqHuiQZvIvZMRbbinIt2vDbF7ueWnK/jvHeky/f0j1xu4w==", "shift"=>{"assignment_id"=>"3", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"10", "start_time(1i)"=>"2000", "start_time(2i)"=>"1", "start_time(3i)"=>"1", "start_time(4i)"=>"20", "start_time(5i)"=>"30", "end_time(1i)"=>"2000", "end_time(2i)"=>"1", "end_time(3i)"=>"1", "end_time(4i)"=>"20", "end_time(5i)"=>"29", "notes"=>""}, "commit"=>"Update Shift", "id"=>"12"}
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:44
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/shifts_controller.rb:44
+  Rendering shifts/edit.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (6.5ms)
+  Rendered shifts/edit.html.erb within layouts/application (8.0ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 31.4ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/shifts/12" for 78.100.201.225 at 2019-04-18 20:42:00 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r1SXGeoinxDe1/OwKgosfPZmqBVpg0JEVIVPdVz+Uliy91EG0O2fQkJSJXZroskpVNCWFZkeE5a9iuF88F46Gg==", "shift"=>{"assignment_id"=>"3", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"10", "start_time(1i)"=>"2000", "start_time(2i)"=>"1", "start_time(3i)"=>"1", "start_time(4i)"=>"20", "start_time(5i)"=>"30", "end_time(1i)"=>"2000", "end_time(2i)"=>"1", "end_time(3i)"=>"1", "end_time(4i)"=>"20", "end_time(5i)"=>"33", "notes"=>""}, "commit"=>"Update Shift", "id"=>"12"}
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:44
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:44
+  [1m[36mShift Update (0.8ms)[0m  [1m[33mUPDATE "shifts" SET "start_time" = ?, "end_time" = ?, "updated_at" = ? WHERE "shifts"."id" = ?[0m  [["start_time", "2000-01-01 20:30:00"], ["end_time", "2000-01-01 20:33:00"], ["updated_at", "2019-04-18 20:42:01.040975"], ["id", 12]]
+  ↳ app/controllers/shifts_controller.rb:44
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:44
+Redirected to https://first-test-bmulla.c9users.io/shifts/12
+Completed 302 Found in 61ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/shifts/12" for 78.100.201.225 at 2019-04-18 20:42:01 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  Rendering shifts/show.html.erb within layouts/application
+  Rendered shifts/show.html.erb within layouts/application (1.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assignments/new" for 78.100.201.225 at 2019-04-18 20:42:04 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (6.3ms)
+  Rendered assignments/new.html.erb within layouts/application (8.4ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assignments" for 78.100.201.225 at 2019-04-18 20:42:16 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:21
+  Rendered assignments/index.html.erb within layouts/application (3.6ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-18 20:42:17 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (1.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:42:18 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (3.1ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:42:19 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (2.8ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:42:20 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (7.0ms)
+  Rendered shifts/new.html.erb within layouts/application (8.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:42:29 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (2.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:42:31 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (7.8ms)
+  Rendered shifts/new.html.erb within layouts/application (9.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:42:35 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JFu2JHFsEXz4FxYm/fhrs4I2e89l7nYW7JY97YP1HYdi+7Qum5ck3/I8HKuMgOS5kMftKvN73uv433DeGZCFjA==", "shift"=>{"assignment_id"=>"3", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"18", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"42", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"45", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/shift.rb:48
+  [1m[36mShift Create (0.5ms)[0m  [1m[32mINSERT INTO "shifts" ("assignment_id", "date", "start_time", "end_time", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["assignment_id", 3], ["date", "2019-04-18"], ["start_time", "2000-01-01 20:42:00"], ["end_time", "2000-01-01 20:45:00"], ["notes", ""], ["created_at", "2019-04-18 20:42:35.181935"], ["updated_at", "2019-04-18 20:42:35.181935"]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/shifts/14
+Completed 302 Found in 25ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/shifts/14" for 78.100.201.225 at 2019-04-18 20:42:35 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  Rendering shifts/show.html.erb within layouts/application
+  Rendered shifts/show.html.erb within layouts/application (1.5ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:42:38 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (3.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:42:39 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (5.9ms)
+  Rendered shifts/new.html.erb within layouts/application (7.4ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:42:43 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G0ZVdus9V35Ikh9g6hR6girGtrR4c2QKELWFuaavmV1d5ld8AcZi3UK5Fe2bbPWIODcgUe7mzPcE/MiKPMoBVg==", "shift"=>{"assignment_id"=>"3", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"18", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"42", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"55", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/shift.rb:48
+  [1m[36mShift Create (1.7ms)[0m  [1m[32mINSERT INTO "shifts" ("assignment_id", "date", "start_time", "end_time", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["assignment_id", 3], ["date", "2019-04-18"], ["start_time", "2000-01-01 20:42:00"], ["end_time", "2000-01-01 20:55:00"], ["notes", ""], ["created_at", "2019-04-18 20:42:43.195997"], ["updated_at", "2019-04-18 20:42:43.195997"]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/shifts/15
+Completed 302 Found in 152ms (ActiveRecord: 15.5ms)
+
+
+Started GET "/shifts/15" for 78.100.201.225 at 2019-04-18 20:42:44 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  Rendering shifts/show.html.erb within layouts/application
+  Rendered shifts/show.html.erb within layouts/application (1.4ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:42:51 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (3.6ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:43:16 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (7.2ms)
+  Rendered shifts/new.html.erb within layouts/application (9.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:43:23 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ur8zCqHIa5Qjn2GZlqK9hxPdjRk4MalvnYuQL88fEC38HzEASzNeNym0axTn2jKNASwb/K6kAZKJwt0cVXqIJg==", "shift"=>{"assignment_id"=>"", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"7", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"43", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"47", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Assignment without an ID):
+  
+app/models/shift.rb:48:in `assignment_is_current'
+app/controllers/shifts_controller.rb:30:in `block in create'
+app/controllers/shifts_controller.rb:29:in `create'
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:43:33 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (6.9ms)
+  Rendered shifts/new.html.erb within layouts/application (8.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:43:42 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Si8LWw5wdg57EMOdS9ubELdGWfO7FLcXFoqULLUjAFsMjwlR5ItDrXE7yRA6oxQapbfPFi2BH+oCw9kfL0aYUA==", "shift"=>{"assignment_id"=>"3", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"9", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"43", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"43", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/shift.rb:48
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (6.9ms)
+  Rendered shifts/new.html.erb within layouts/application (8.5ms)
+  Rendered partials/_nav.html.erb (9.0ms)
+Completed 200 OK in 46ms (Views: 39.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:43:46 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SxbIhEN3SfNjJ81JvIFvS5+x+RvoASDgBERoNq+rXZ9WtQ6bebhJof+iG4/9KYoePQfHGxiccTLtS8Y/Aws13Q==", "shift"=>{"assignment_id"=>"3", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"9", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"43", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"48", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/shift.rb:48
+  [1m[36mShift Create (1.3ms)[0m  [1m[32mINSERT INTO "shifts" ("assignment_id", "date", "start_time", "end_time", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["assignment_id", 3], ["date", "2019-04-09"], ["start_time", "2000-01-01 20:43:00"], ["end_time", "2000-01-01 20:48:00"], ["notes", ""], ["created_at", "2019-04-18 20:43:46.503646"], ["updated_at", "2019-04-18 20:43:46.503646"]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (34.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/shifts/16
+Completed 302 Found in 46ms (ActiveRecord: 36.0ms)
+
+
+Started GET "/shifts/16" for 78.100.201.225 at 2019-04-18 20:43:46 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  Rendering shifts/show.html.erb within layouts/application
+  Rendered shifts/show.html.erb within layouts/application (2.2ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:44:06 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (4.9ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:44:29 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (7.9ms)
+  Rendered shifts/new.html.erb within layouts/application (9.4ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:44:37 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zWvsNzvfItSqvIb/lVv5PSqO4EbuzigiMH6TrrnBGnOLy+490SQXd6CXjHLkI3Y3OH92o3hbgN8kN96dI6SCeA==", "shift"=>{"assignment_id"=>"3", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"4", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"44", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"49", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/shift.rb:48
+  [1m[36mShift Create (0.5ms)[0m  [1m[32mINSERT INTO "shifts" ("assignment_id", "date", "start_time", "end_time", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["assignment_id", 3], ["date", "2019-04-04"], ["start_time", "2000-01-01 20:44:00"], ["end_time", "2000-01-01 20:49:00"], ["notes", ""], ["created_at", "2019-04-18 20:44:37.876361"], ["updated_at", "2019-04-18 20:44:37.876361"]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (66.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/shifts/17
+Completed 302 Found in 78ms (ActiveRecord: 67.2ms)
+
+
+Started GET "/shifts/17" for 78.100.201.225 at 2019-04-18 20:44:38 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  Rendering shifts/show.html.erb within layouts/application
+  Rendered shifts/show.html.erb within layouts/application (2.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:44:40 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (4.7ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:44:42 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (6.1ms)
+  Rendered shifts/new.html.erb within layouts/application (7.5ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:44:49 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wOmwViISQZDe8ZbXznSXguFZDQob9WG80wx1uHlfo6WGSbJcyOl0M9TanFq/DBiI86ib741gyUHHRTiL4zo7rg==", "shift"=>{"assignment_id"=>"", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"7", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"44", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"49", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Assignment without an ID):
+  
+app/models/shift.rb:48:in `assignment_is_current'
+app/controllers/shifts_controller.rb:30:in `block in create'
+app/controllers/shifts_controller.rb:29:in `create'
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:46:06 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (35.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 37.0ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:46:08 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (12.0ms)
+  Rendered shifts/new.html.erb within layouts/application (14.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:46:11 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vA5tmrtrStnTLCm4C697u1TNpy8U76zPkf+zy6Kwum/6rm+QUZB/etkHIzV61/SxRjwxyoJ6BDKFtv74ONUiZA==", "shift"=>{"assignment_id"=>"", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"18", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"46", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"46", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (6.8ms)
+  Rendered shifts/new.html.erb within layouts/application (8.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 46ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:46:18 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A4Hhz+XgBCLmjU0J0d28pRBX8ow9eacbIRKjSuHBHOseIifQ3y8EcHoIm8+QdVnwsuHMjM3k9snIHQ1DTWF0qQ==", "shift"=>{"assignment_id"=>"", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"18", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"46", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"49", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (6.9ms)
+  Rendered shifts/new.html.erb within layouts/application (8.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 34ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:46:47 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (12.2ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 43ms (Views: 32.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:46:47 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (7.1ms)
+  Rendered shifts/new.html.erb within layouts/application (8.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:46:49 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (7.8ms)
+  Rendered shifts/new.html.erb within layouts/application (9.5ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:46:51 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lyjMiZ8oF4EocWvJ7/Hjr+C5t8MzUg80A1t3usinpY3RiM6DddMiIiJaYUSeiWyl8kghJqXHp8kXEjqJUsI9hg==", "shift"=>{"assignment_id"=>"", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"18", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"46", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"46", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (7.3ms)
+  Rendered shifts/new.html.erb within layouts/application (8.9ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 182ms (Views: 164.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:47:01 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"faCSBgrKvX09OGDRIj98Nftxk7UiWwfX/YDFl0iqfYxgA1QZMAW9L6G9thdjl5lgWcettdLGVgUUj2ue5AoVzg==", "shift"=>{"assignment_id"=>"", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"18", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"46", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"49", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (10.9ms)
+  Rendered shifts/new.html.erb within layouts/application (13.3ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 67ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:47:57 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xL21bDSSK6VCttDLfRgq83Pl07ofJ9eXpWhBEetJipPZHnNzDl0r994zBg08sM+m0VPtuu+6hkVMZ+8YR+ni0Q==", "shift"=>{"assignment_id"=>"3", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"18", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"46", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"49", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/shift.rb:49
+  [1m[36mShift Create (1.4ms)[0m  [1m[32mINSERT INTO "shifts" ("assignment_id", "date", "start_time", "end_time", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["assignment_id", 3], ["date", "2019-04-18"], ["start_time", "2000-01-01 20:46:00"], ["end_time", "2000-01-01 20:49:00"], ["notes", ""], ["created_at", "2019-04-18 20:47:57.894798"], ["updated_at", "2019-04-18 20:47:57.894798"]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (55.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/shifts/18
+Completed 302 Found in 79ms (ActiveRecord: 57.6ms)
+
+
+Started GET "/shifts/18" for 78.100.201.225 at 2019-04-18 20:47:58 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  Rendering shifts/show.html.erb within layouts/application
+  Rendered shifts/show.html.erb within layouts/application (1.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:48:01 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (4.7ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assignments" for 78.100.201.225 at 2019-04-18 20:48:25 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:21
+  Rendered assignments/index.html.erb within layouts/application (3.6ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-18 20:48:27 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:24
+  Rendered stores/index.html.erb within layouts/application (15.7ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 87ms (Views: 71.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-18 20:49:35 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:25
+  Rendered stores/index.html.erb within layouts/application (3.8ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-18 20:49:36 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:25
+  Rendered stores/index.html.erb within layouts/application (3.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-18 20:49:37 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:25
+  Rendered stores/index.html.erb within layouts/application (3.1ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-18 20:49:37 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:25
+  Rendered stores/index.html.erb within layouts/application (3.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-18 20:50:23 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:25
+  Rendered stores/index.html.erb within layouts/application (4.4ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-18 20:50:24 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:25
+  Rendered stores/index.html.erb within layouts/application (3.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/new" for 78.100.201.225 at 2019-04-18 20:51:10 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/_form.html.erb (6.2ms)
+  Rendered stores/new.html.erb within layouts/application (9.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stores" for 78.100.201.225 at 2019-04-18 20:51:39 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HDZPYav1vUz/0TG+TDRNi4y6dnfXxgdRpyJIEZNjN6hPVoNG2sEhaRXaDU6A2jqzlD/Nog+wfdwueWzW8NgL6w==", "store"=>{"name"=>"Pitt", "street"=>"sd sd", "city"=>"", "state"=>"PA", "zip"=>"121213", "phone"=>"1243212345", "latitude"=>"23.23", "longitude"=>"23.23", "active"=>"true"}, "commit"=>"save"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/stores_controller.rb:30
+  [1m[36mStore Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."name" = ? LIMIT ?[0m  [["name", "Pitt"], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/stores_controller.rb:30
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/_form.html.erb (4.9ms)
+  Rendered stores/new.html.erb within layouts/application (6.5ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 38ms (Views: 30.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/stores" for 78.100.201.225 at 2019-04-18 20:51:47 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6w6wLLgYmgCzDDb/0GKLZqQs7wVHyK74tEUibpK4SE/2rXYzgteaUi+J4DmRym4zBprRBbdV/ypdSoxnPhggDQ==", "store"=>{"name"=>"Pitt", "street"=>"sd sd", "city"=>"", "state"=>"PA", "zip"=>"14234", "phone"=>"1243212345", "latitude"=>"23.23", "longitude"=>"23.23", "active"=>"true"}, "commit"=>"save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/stores_controller.rb:30
+  [1m[36mStore Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."name" = ? LIMIT ?[0m  [["name", "Pitt"], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:30
+  [1m[36mStore Create (0.7ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "latitude", "longitude", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pitt"], ["street", "sd sd"], ["city", ""], ["state", "PA"], ["zip", "14234"], ["phone", "1243212345"], ["latitude", 23.23], ["longitude", 23.23], ["active", 1], ["created_at", "2019-04-18 20:51:47.372258"], ["updated_at", "2019-04-18 20:51:47.372258"]]
+  ↳ app/controllers/stores_controller.rb:30
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/stores_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/stores/4
+Completed 302 Found in 176ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/stores/4" for 78.100.201.225 at 2019-04-18 20:51:48 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:67
+  Rendering stores/show.html.erb within layouts/application
+  Rendered stores/show.html.erb within layouts/application (1.6ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-18 20:51:51 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:25
+  Rendered stores/index.html.erb within layouts/application (5.7ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-18 20:51:58 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 13], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  Rendered employees/index.html.erb within layouts/application (34.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 79ms (Views: 68.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assignments/new" for 78.100.201.225 at 2019-04-18 20:52:06 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (3.3ms)
+  Rendered assignments/new.html.erb within layouts/application (5.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/assignments" for 78.100.201.225 at 2019-04-18 20:52:32 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hvEzJCcDcRlg62QDUSVoIhVx18c1CvbH0mOmAVxltD7hduxqWP78l5dqy5SRoEz7gWTKD57MX6N8APQsSBBq+w==", "assignment"=>{"store_id"=>"1", "employee_id"=>"16", "start_date"=>"2019-4-10", "end_date"=>"", "pay_level"=>"2"}, "commit"=>"save"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:44
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:51
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (4.8ms)
+  Rendered assignments/new.html.erb within layouts/application (7.1ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 82ms (Views: 58.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/assignments" for 78.100.201.225 at 2019-04-18 20:52:42 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H69XzSnIoSGv8T8rtc1SJX4Icl0laSQljeztDKkp3CMCDJHSEwehczN06e30Zbdw3L5MXdX0dfdk40MFBYm0YQ==", "assignment"=>{"store_id"=>"1", "employee_id"=>"15", "start_date"=>"2019-04-10", "end_date"=>"", "pay_level"=>"2"}, "commit"=>"save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:44
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:51
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (3.4ms)
+  Rendered assignments/new.html.erb within layouts/application (5.1ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 34ms (Views: 26.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees/new" for 78.100.201.225 at 2019-04-18 20:52:50 +0000
+Started GET "/employees" for 78.100.201.225 at 2019-04-18 20:52:50 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#new as HTML
+Processing by EmployeesController#index as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 13], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  Rendered employees/_form.html.erb (14.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  Rendered employees/new.html.erb within layouts/application (27.1ms)
+  ↳ app/views/employees/index.html.erb:35
+  Rendered employees/index.html.erb within layouts/application (30.8ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 191ms (Views: 185.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendered partials/_nav.html.erb (0.2ms)
+Completed 200 OK in 190ms (Views: 186.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/employees/16/edit" for 78.100.201.225 at 2019-04-18 20:52:56 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73
+  Rendering employees/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:68
+  Rendered employees/_form.html.erb (8.2ms)
+  Rendered employees/edit.html.erb within layouts/application (10.1ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 37ms (Views: 32.2ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/employees/16" for 78.100.201.225 at 2019-04-18 20:53:03 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v1U5jOAPO+mDRJQ+d4qOQD93+SUz0VOhw+/MpldaOCeZgkdxCwwZBlm/y0c5TndhlWJIBwuAJSNxZf5EA/xlhQ==", "employee"=>{"first_name"=>"sds", "last_name"=>"sds", "ssn"=>"163424321", "date_of_birth"=>"1960-12-12", "phone"=>"", "role"=>"manager", "active"=>"true", "user_attributes"=>{"email"=>"as@12.com", "password"=>"[FILTERED]", "id"=>"8"}}, "commit"=>"save", "id"=>"16"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:47
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:47
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "as@12.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:47
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? AND "employees"."id" != ? LIMIT ?[0m  [["ssn", "163424321"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:47
+  [1m[36mEmployee Update (0.4ms)[0m  [1m[33mUPDATE "employees" SET "active" = ?, "updated_at" = ? WHERE "employees"."id" = ?[0m  [["active", 1], ["updated_at", "2019-04-18 20:53:03.837654"], ["id", 16]]
+  ↳ app/controllers/employees_controller.rb:47
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:47
+Redirected to https://first-test-bmulla.c9users.io/employees/16
+Completed 302 Found in 115ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/employees/16" for 78.100.201.225 at 2019-04-18 20:53:04 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  Rendered employees/show.html.erb within layouts/application (2.9ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-18 20:53:11 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 13], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  Rendered employees/index.html.erb within layouts/application (7.8ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/assignments" for 78.100.201.225 at 2019-04-18 20:53:20 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I2oBE0m+4tiXXPwfxcfMpp8iA7VrfpnZn4HeQLSNcLU+yccMc3HiigvZKtmEbynzPZQ9tZvjyAt2jnBJGC0Y9w==", "assignment"=>{"store_id"=>"1", "employee_id"=>"16", "start_date"=>"2019-04-10", "end_date"=>"", "pay_level"=>"2"}, "commit"=>"save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:44
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:51
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/models/assignment.rb:34
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."employee_id" = ?[0m  [["employee_id", 16]]
+  ↳ app/models/employee.rb:41
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date", "pay_level", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["store_id", 1], ["employee_id", 16], ["start_date", "2019-04-10"], ["pay_level", 2], ["created_at", "2019-04-18 20:53:20.532801"], ["updated_at", "2019-04-18 20:53:20.532801"]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/assignments/4
+Completed 302 Found in 39ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/assignments/4" for 78.100.201.225 at 2019-04-18 20:53:20 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:67
+  Rendering assignments/show.html.erb within layouts/application
+  Rendered assignments/show.html.erb within layouts/application (1.4ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assignments" for 78.100.201.225 at 2019-04-18 20:53:24 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:21
+  Rendered assignments/index.html.erb within layouts/application (3.9ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assignments/new" for 78.100.201.225 at 2019-04-18 20:53:28 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#new as HTML
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (3.9ms)
+  Rendered assignments/new.html.erb within layouts/application (6.0ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees/15/edit" for 78.100.201.225 at 2019-04-18 20:53:40 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73
+  Rendering employees/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:68
+  Rendered employees/_form.html.erb (7.1ms)
+  Rendered employees/edit.html.erb within layouts/application (9.1ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/employees/15" for 78.100.201.225 at 2019-04-18 20:53:48 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3w3w6NuJrGoXzFW4M+6CsQY6URbhsjv2SnsZpJUoL0qK9rvz88rXZdBM6NXM6WY/z0PzeHwRfmiPpnDAWg5Omg==", "employee"=>{"first_name"=>"dfd", "last_name"=>"dfdf", "ssn"=>"126754398", "date_of_birth"=>"1980-12-12", "phone"=>"", "role"=>"manager", "active"=>"true", "user_attributes"=>{"email"=>"sd@as.com", "password"=>"[FILTERED]", "id"=>"7"}}, "commit"=>"save", "id"=>"15"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:47
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:47
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "sd@as.com"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:47
+  [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? AND "employees"."id" != ? LIMIT ?[0m  [["ssn", "126754398"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:47
+  [1m[36mEmployee Update (0.3ms)[0m  [1m[33mUPDATE "employees" SET "active" = ?, "updated_at" = ? WHERE "employees"."id" = ?[0m  [["active", 1], ["updated_at", "2019-04-18 20:53:48.054890"], ["id", 15]]
+  ↳ app/controllers/employees_controller.rb:47
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:47
+Redirected to https://first-test-bmulla.c9users.io/employees/15
+Completed 302 Found in 96ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/employees/15" for 78.100.201.225 at 2019-04-18 20:53:48 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:73
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:41
+  Rendered employees/show.html.erb within layouts/application (2.9ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-18 20:53:52 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 13], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  Rendered employees/index.html.erb within layouts/application (6.6ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/assignments" for 78.100.201.225 at 2019-04-18 20:54:07 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VtLAl8ofLrL2hC49Z6ebdnLmtMzpB3j+8KK/33BIk6oxVR/ZteKjPAEFgaqnIr+v5vOpBELB0Zpewe3yZD1Nbw==", "assignment"=>{"store_id"=>"2", "employee_id"=>"15", "start_date"=>"2019-04-04", "end_date"=>"", "pay_level"=>""}, "commit"=>"save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:44
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:51
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  Rendering assignments/new.html.erb within layouts/application
+  Rendered assignments/_form.html.erb (4.1ms)
+  Rendered assignments/new.html.erb within layouts/application (5.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 168ms (Views: 142.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-18 20:54:17 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:25
+  Rendered stores/index.html.erb within layouts/application (3.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores" for 78.100.201.225 at 2019-04-18 20:54:18 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (120.7ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:25
+  Rendered stores/index.html.erb within layouts/application (124.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 148ms (Views: 25.3ms | ActiveRecord: 120.7ms)
+
+
+Started POST "/assignments" for 78.100.201.225 at 2019-04-18 20:54:30 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9tyVS+6ng1md3Hbq7wSpFYf0wIqXrcQXHnM6xob/Pirrf1NU1GiDCwFZoCyurExAJUL+imcwlcX3fJTPKl9WaA==", "assignment"=>{"store_id"=>"4", "employee_id"=>"15", "start_date"=>"2019-04-04", "end_date"=>"", "pay_level"=>"1"}, "commit"=>"save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:44
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  ↳ app/models/assignment.rb:51
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/models/assignment.rb:34
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."employee_id" = ?[0m  [["employee_id", 15]]
+  ↳ app/models/employee.rb:41
+  [1m[36mAssignment Create (0.3ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date", "pay_level", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["store_id", 4], ["employee_id", 15], ["start_date", "2019-04-04"], ["pay_level", 1], ["created_at", "2019-04-18 20:54:30.185857"], ["updated_at", "2019-04-18 20:54:30.185857"]]
+  ↳ app/controllers/assignments_controller.rb:30
+  [1m[35m (156.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/assignments_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/assignments/5
+Completed 302 Found in 169ms (ActiveRecord: 157.8ms)
+
+
+Started GET "/assignments/5" for 78.100.201.225 at 2019-04-18 20:54:30 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/assignments_controller.rb:67
+  Rendering assignments/show.html.erb within layouts/application
+  Rendered assignments/show.html.erb within layouts/application (1.7ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assignments" for 78.100.201.225 at 2019-04-18 20:54:44 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:21
+  Rendered assignments/index.html.erb within layouts/application (3.8ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-18 20:54:52 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 13], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  Rendered employees/index.html.erb within layouts/application (7.5ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:54:54 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (6.4ms)
+  Rendered shifts/new.html.erb within layouts/application (7.9ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:54:55 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (5.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:54:55 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:54:55 +0000
+Processing by ShiftsController#new as HTML
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendering shifts/index.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (6.8ms)
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  Rendered shifts/new.html.erb within layouts/application (10.6ms)
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (9.4ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.3ms)
+
+
+  Rendered partials/_nav.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:55:19 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7MqvFOvgzwihIPLGvq71O3fTOFkCVQdYaumuNM6jYw+qaq0eARv6q6sL+EvP1noxZSKuvJTAr6V+oOMHVMb7BA==", "shift"=>{"assignment_id"=>"4", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"10", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"54", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"58", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/shift.rb:49
+  [1m[36mShift Create (0.7ms)[0m  [1m[32mINSERT INTO "shifts" ("assignment_id", "date", "start_time", "end_time", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["assignment_id", 4], ["date", "2019-04-10"], ["start_time", "2000-01-01 20:54:00"], ["end_time", "2000-01-01 20:58:00"], ["notes", ""], ["created_at", "2019-04-18 20:55:19.313330"], ["updated_at", "2019-04-18 20:55:19.313330"]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (35.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/shifts/19
+Completed 302 Found in 47ms (ActiveRecord: 36.2ms)
+
+
+Started GET "/shifts/19" for 78.100.201.225 at 2019-04-18 20:55:19 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  Rendering shifts/show.html.erb within layouts/application
+  Rendered shifts/show.html.erb within layouts/application (1.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:55:22 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (4.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 20:55:25 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (7.4ms)
+  Rendered shifts/new.html.erb within layouts/application (9.0ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 20:55:36 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h+xQlIqOE+UUEz0DS0K18fux865tKoh0+a3suZkmySPBTFKeYHUmRh44N446Ojr76UBlS/u/IInt5KGKA0NRKA==", "shift"=>{"assignment_id"=>"5", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"11", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"20", "start_time(5i)"=>"55", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"20", "end_time(5i)"=>"59", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/shift.rb:49
+  [1m[36mShift Create (0.4ms)[0m  [1m[32mINSERT INTO "shifts" ("assignment_id", "date", "start_time", "end_time", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["assignment_id", 5], ["date", "2019-04-11"], ["start_time", "2000-01-01 20:55:00"], ["end_time", "2000-01-01 20:59:00"], ["notes", ""], ["created_at", "2019-04-18 20:55:36.013763"], ["updated_at", "2019-04-18 20:55:36.013763"]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (39.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/shifts/20
+Completed 302 Found in 136ms (ActiveRecord: 40.0ms)
+
+
+Started GET "/shifts/20" for 78.100.201.225 at 2019-04-18 20:55:36 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  Rendering shifts/show.html.erb within layouts/application
+  Rendered shifts/show.html.erb within layouts/application (1.6ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 20:55:40 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (5.4ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mShift Load (0.9ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.9ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (store_id = 1) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.8ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (date < '2019-04-18 20:57:52.616711') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (date >= '2019-04-18 20:58:07.436154') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.7ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (date < '2019-04-18') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (date >= '2019-04-18') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (1.1ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (store_id = 1) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.5ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "assignments" ON "assignments"."id" = "shifts"."assignment_id" WHERE (store_id = 1) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "assignments" ON "assignments"."id" = "shifts"."assignment_id" WHERE (store_id = 6) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (3.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "assignments" ON "assignments"."id" = "shifts"."assignment_id" WHERE (store_id = 4) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "shifts" INNER JOIN "assignments" ON "assignments"."id" = "shifts"."assignment_id" WHERE (store_id = 1)[0m
+  [1m[36mShift Load (0.7ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (date < '2019-04-19') LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/shifts/new" for 78.100.201.225 at 2019-04-18 21:20:32 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by ShiftsController#new as HTML
+  Rendering shifts/new.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (11.3ms)
+  Rendered shifts/new.html.erb within layouts/application (13.1ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 204ms (Views: 182.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/shifts" for 78.100.201.225 at 2019-04-18 21:20:42 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C3lvPc3JoPMJErP05MDBCa/zKlzOmfgwb8HRr76cWkgW2qki9wagoZWXZTKlaCRcDUUUXD4EqeKGzn+mEjwyCg==", "shift"=>{"assignment_id"=>"4", "date(1i)"=>"2019", "date(2i)"=>"4", "date(3i)"=>"22", "start_time(1i)"=>"2019", "start_time(2i)"=>"4", "start_time(3i)"=>"18", "start_time(4i)"=>"21", "start_time(5i)"=>"20", "end_time(1i)"=>"2019", "end_time(2i)"=>"4", "end_time(3i)"=>"18", "end_time(4i)"=>"21", "end_time(5i)"=>"27", "notes"=>""}, "commit"=>"Create Shift"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/shift.rb:49
+  [1m[36mShift Create (0.6ms)[0m  [1m[32mINSERT INTO "shifts" ("assignment_id", "date", "start_time", "end_time", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["assignment_id", 4], ["date", "2019-04-22"], ["start_time", "2000-01-01 21:20:00"], ["end_time", "2000-01-01 21:27:00"], ["notes", ""], ["created_at", "2019-04-18 21:20:42.803993"], ["updated_at", "2019-04-18 21:20:42.803993"]]
+  ↳ app/controllers/shifts_controller.rb:30
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shifts_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/shifts/21
+Completed 302 Found in 201ms (ActiveRecord: 15.8ms)
+
+
+Started GET "/shifts/21" for 78.100.201.225 at 2019-04-18 21:20:43 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  Rendering shifts/show.html.erb within layouts/application
+  Rendered shifts/show.html.erb within layouts/application (1.6ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-18 21:20:45 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:18
+  Rendered shifts/index.html.erb within layouts/application (6.7ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mShift Load (0.6ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (date >= '2019-04-18' and date < '2019-04-19') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "shifts" WHERE (date >= '2019-04-18' and date < '2019-04-19')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "shifts" WHERE (date >= '2019-04-18' and date < '2019-04-20')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "shifts" WHERE (date >= '2019-04-18' and date <= '2019-04-19')[0m
+  [1m[36mShift Load (0.6ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "shifts" WHERE (date >= '2019-04-18' and date <= '2019-04-24')[0m
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" ORDER BY "shifts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

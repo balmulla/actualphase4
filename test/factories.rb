@@ -27,5 +27,12 @@ FactoryBot.define do
     end_date {1.month.ago.to_date}
     pay_level {1}
   end
+  
+  factory :shift do
+    association :assignment
+    date {Date.current}
+    start_time {Time.now}
+    end_time {Time.now+3600}
+  end
 
 end
