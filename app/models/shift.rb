@@ -10,6 +10,8 @@ class Shift < ApplicationRecord
   belongs_to :assignment
   has_one :employee, through: :assignment
   has_one :store, through: :assignment
+  has_many :shiftjobs
+  has_many :jobs, through: :shiftjobs
 
   
   # Validations

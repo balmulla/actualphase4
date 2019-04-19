@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shiftjobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shift</th>
+      <th>Job</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shiftjobs.each do |shiftjob| %>
+      <tr>
+        <td><%= shiftjob.shift_id %></td>
+        <td><%= shiftjob.job_id %></td>
+        <td><%= link_to 'Show', shiftjob %></td>
+        <td><%= link_to 'Edit', edit_shiftjob_path(shiftjob) %></td>
+        <td><%= link_to 'Destroy', shiftjob, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shiftjob', new_shiftjob_path %>

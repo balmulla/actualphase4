@@ -5,6 +5,8 @@ class ShiftTest < ActiveSupport::TestCase
   should belong_to(:assignment)
   should have_one(:store).through(:assignment)
   should have_one(:employee).through(:assignment)
+  should have_many(:shiftjobs)
+  should have_many(:jobs).through(:shiftjobs)
   
   # Test basic validations
   # for start date
@@ -14,6 +16,7 @@ class ShiftTest < ActiveSupport::TestCase
   should_not allow_value("bad").for(:date)
   should_not allow_value(nil).for(:date)
   should_not allow_value(nil).for(:assignment_id)
+  should_not allow_value(nil).for(:start_time)
   
   
   # # Need to do the rest with a context
