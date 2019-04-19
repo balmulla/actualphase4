@@ -39,8 +39,10 @@
   
 
   <div class="field">
-    <%= form.label :date_of_birth, :style => "position:relative;"  %>
-    <%= form.date_field :date_of_birth, id: :employee_date_of_birth, :style => "position:relative; "  %>
+    <%= form.label :date_of_birth, :style => "position:relative;"  %> <br>
+    <!--<%= form.date_field :date_of_birth, id: :employee_date_of_birth, :style => "position:relative; "  %>-->
+    <%= form.date_select :date_of_birth , :order => [:day, :month, :year], :start_year => 1980, :end_year => Time.now.year - 18 %>
+  
   </div>
 
   

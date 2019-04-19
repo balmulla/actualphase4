@@ -1,6 +1,8 @@
-<h1>Editing Store</h1>
+<br>
+<h1 style = "position:absolute; TOP:23px; LEFT:184px; ">Editing Store</h1>
+<%= link_to 'Show', @store, :style => "position:absolute; TOP:30px; LEFT:680px; ", :class => "btn btn-info"  %> 
+<%= link_to 'Back', stores_path, :style => "position:absolute; TOP:30px; LEFT:600px; ", :class => "btn btn-info"  %>
 
 <%= render 'form', store: @store %>
 
-<%= link_to 'Show', @store %> |
-<%= link_to 'Back', stores_path %>
+

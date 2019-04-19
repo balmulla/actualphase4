@@ -1,3 +1,6 @@
+<br>
+<br>
+<div style = "position:absolute; LEFT:300px;">
 <p id="notice"><%= notice %></p>
 <p>
   <strong>Store ID:</strong>
@@ -26,5 +29,7 @@
 
 
 
-<%= link_to 'Edit', edit_assignment_path(@assignment) %> |
-<%= link_to 'Back', assignments_path %>
+<%= link_to 'Edit', edit_assignment_path(@assignment), :class => "btn btn-info"  %> 
+<%= link_to 'Back', assignments_path, :class => "btn btn-info"  %>
+
+</div>

@@ -1,42 +1,50 @@
-<%= form_with(model: shift, local: true) do |form| %>
+<%= form_with(model: shift, local: true,  :html => {:style =>"position:absolute; TOP:135px; LEFT:170px;font-size:160%;"}) do |form| %>
   <% if shift.errors.any? %>
+    <div class="col-md-6">
     <div id="error_explanation">
-      <h2><%= pluralize(shift.errors.count, "error") %> prohibited this shift from being saved:</h2>
+      <h6 style="color:red;"><%= pluralize(shift.errors.count, "error") %> prohibited this shift from being saved:</h6>
 
       <ul>
       <% shift.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li style="font-size:50%;color:red;"><%= message %></li>
       <% end %>
       </ul>
     </div>
+    </div>
   <% end %>
 
+<div class="col-md-6">
   <div class="field">
-    <%= form.label :assignment_id %>
-    <%= form.number_field :assignment_id %>
+    <%= form.label :assignment_id, :style => "position:relative;" %>
+    <%= form.number_field :assignment_id, :style => "position:relative;" %>
   </div>
 
   <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
+    <%= form.label :date, :style => "position:relative;" %>
+    <%= form.date_select :date, :style => "position:relative;" %>
   </div>
 
   <div class="field">
-    <%= form.label :start_time %>
-    <%= form.time_select :start_time %>
+    <%= form.label :start_time, :style => "position:relative;" %>
+    <%= form.time_select :start_time, :style => "position:relative;" %>
   </div>
 
   <div class="field">
-    <%= form.label :end_time %>
-    <%= form.time_select :end_time %>
+    <%= form.label :end_time, :style => "position:relative;" %>
+    <%= form.time_select :end_time, :style => "position:relative;" %>
   </div>
 
   <div class="field">
-    <%= form.label :notes %>
-    <%= form.text_area :notes %>
+    <%= form.label :notes, :style => "position:relative;" %>
+    <%= form.text_area :notes, :style => "position:relative;" %>
   </div>
-
+  
+<br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "save", :class => 'btn btn-secondary' %>
   </div>
 <% end %>
+<br>
+<br>
+
+</div>
