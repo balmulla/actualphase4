@@ -16634,3 +16634,18 @@ Processing by ShiftsController#edit as HTML
 Completed 200 OK in 130ms (Views: 126.2ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/shifts/12/edit" for 78.100.201.225 at 2019-04-19 11:28:59 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by ShiftsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/shifts_controller.rb:78
+  Rendering shifts/edit.html.erb within layouts/application
+  Rendered shifts/_form.html.erb (12.1ms)
+  Rendered shifts/edit.html.erb within layouts/application (15.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 252ms (Views: 222.4ms | ActiveRecord: 1.3ms)
+
+
