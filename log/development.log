@@ -15504,3 +15504,30 @@ Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.4ms)
   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mAssignment Load (0.9ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY "assignments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShift Create (0.9ms)[0m  [1m[32mINSERT INTO "shifts" ("assignment_id", "date", "start_time", "end_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["assignment_id", 5], ["date", "2019-04-18"], ["start_time", "2000-01-01 08:44:21.067334"], ["end_time", "2000-01-01 09:44:21.067334"], ["created_at", "2019-04-19 08:44:47.868744"], ["updated_at", "2019-04-19 08:44:47.868744"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mShift Update (0.5ms)[0m  [1m[33mUPDATE "shifts" SET "date" = ?, "updated_at" = ? WHERE "shifts"."id" = ?[0m  [["date", "2019-04-19"], ["updated_at", "2019-04-19 08:48:02.329351"], ["id", 22]]
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShift Destroy (0.6ms)[0m  [1m[31mDELETE FROM "shifts" WHERE "shifts"."id" = ?[0m  [["id", 22]]
+  [1m[35m (20.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAssignment Load (0.6ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

@@ -114,11 +114,20 @@ class AssignmentTest < ActiveSupport::TestCase
       inactive_employee = FactoryBot.build(:assignment, store: @oakland, employee: @fred, start_date: 1.day.ago.to_date, end_date: nil)
       assert_equal false,inactive_employee.valid?
     end
+    
+    should "show errors if employee is not active" do
+      @fred = FactoryBot.build(:employee, first_name: "Fred", active: false)
+      inactive_employee = Assignment.create(store_id: @oakland.id, employee_id: @fred.id, start_date: 1.day.ago.to_date, end_date: nil)
+      assert_not_equal nil, inactive_employee.errors
+    end
+      
 
     should "end the current assignment if it exists before adding a new assignment for an employee" do
       @promote_kathryn = FactoryBot.create(:assignment, employee: @kathryn, store: @oakland, start_date: 1.day.ago.to_date, end_date: nil, pay_level: 4)
       assert_equal 1.day.ago.to_date, @kathryn.assignments.first.end_date
       @promote_kathryn.destroy
     end
+    
+    
   end
 end

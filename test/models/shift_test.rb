@@ -15,6 +15,7 @@ class ShiftTest < ActiveSupport::TestCase
   should_not allow_value(nil).for(:date)
   should_not allow_value(nil).for(:assignment_id)
   
+  
   # # Need to do the rest with a context
   context "Creating a context for assignments" do
     setup do
@@ -38,6 +39,12 @@ class ShiftTest < ActiveSupport::TestCase
       @shift_ben3.destroy
     end
     
+    should " not allow shift creation if assignment is not current" do
+      @shift_ben3 = Shift.create(assignment_id: @assign_ben.id, date: Date.current, start_time: Time.now, end_time: Time.now+3600)
+      assert_equal ["Assignment is not a current assignment"], @shift_ben3.errors.full_messages
+      @shift_ben3.destroy
+    end
+    
     should " allow update start time to current time" do
       @shift_ben3 = FactoryBot.create(:shift, assignment: @promote_ben)
       @shift_ben3.start_now
@@ -49,6 +56,20 @@ class ShiftTest < ActiveSupport::TestCase
       @shift_kath.end_now
       assert_equal @shift_kath.end_time.hour, Time.now.hour
     end
+    
+    should " not destroy a past shift" do
+      @shift_ben3 = Shift.new(assignment_id: @promote_ben.id, date: Date.current-1, start_time: Time.now, end_time: Time.now+3600)
+      @shift_ben3.save(validate: false)
+      @shift_ben3.destroy
+      assert_not_equal nil, @shift_ben3
+      @shift_ben3.date=(Date.current)
+      @shift_ben3.save
+      @shift_ben3.destroy
+      
+    end
+    
+    
+
     
   end
   

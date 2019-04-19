@@ -160,5 +160,11 @@ class EmployeeTest < ActiveSupport::TestCase
       assert_equal 17, @cindy.age
       assert_equal 30, @kathryn.age
     end
+    
+    # test the method 'name'
+    should "shows that name works" do
+      assert_equal "Crawford, Cindy" , @cindy.name
+      assert_equal "Janeway, Kathryn" , @kathryn.name
+    end
   end
 end
