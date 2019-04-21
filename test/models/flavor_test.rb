@@ -31,5 +31,6 @@ class FlavorTest < ActiveSupport::TestCase
       assert_equal 3, Flavor.alphabetically.count
       assert_equal [@chocolate,@strawberry, @vanilla], Flavor.alphabetically
     end
+  end
     
 end

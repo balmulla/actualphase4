@@ -6,6 +6,7 @@ require './test/sets/assignment_contexts'
 require './test/sets/shift_contexts'
 require './test/sets/shiftjob_contexts'
 require './test/sets/job_contexts'
+require './test/sets/flavor_contexts'
 
 module Contexts
   # explicitly include all sets of contexts used for testing 
