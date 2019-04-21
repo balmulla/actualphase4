@@ -54,9 +54,10 @@ class StoresController < ApplicationController
   # DELETE /stores/1
   # DELETE /stores/1.json
   def destroy
-    @store.destroy
+    @store.active="false"
+    @store.save
     respond_to do |format|
-      format.html { redirect_to stores_url, notice: 'Store was successfully destroyed.' }
+      format.html { redirect_to stores_url, notice: 'Store was successfully made inactive.' }
       format.json { head :no_content }
     end
   end

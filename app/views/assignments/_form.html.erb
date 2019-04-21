@@ -29,14 +29,14 @@
   <tr>
   <div class="field">
     <%= form.label :start_date, :style => "position:relative;"  %> <br>
-    <%= form.date_select :start_date , :order => [:day, :month, :year], :start_year => 1980, :end_year => Time.now.year - 18 %>
+    <%= form.date_select :start_date , :order => [:day, :month, :year], :start_year => 1980, :end_year => Time.now.year %>
   </div>  
   </tr>
   
   <tr>
   <div class="field">
     <%= form.label :end_date, :style => "position:relative;"  %> <br>
-    <%= form.date_select :end_date , :order => [:day, :month, :year], :start_year => 1980, :end_year => Time.now.year - 18 %>
+    <%= form.date_select :end_date, :order => [:day, :month, :year], :start_year => 1980, :end_year => Time.now.year, :include_blank => true, :default => nil %>
   </div>
   </tr>
   

@@ -57,13 +57,38 @@ class EmployeesController < ApplicationController
   # DELETE /employees/1
   # DELETE /employees/1.json
   def destroy
-    @employee.destroy
-    if @employee.user.present?
-      @employee.user.destroy
-    end
-    respond_to do |format|
-      format.html { redirect_to employees_url, notice: 'Employee and user were successfully destroyed.' }
-      format.json { head :no_content }
+    if (Shift.for_employee(@employee.id).count == 0)
+      @employee.destroy
+      if @employee.user.present?
+        @employee.user.destroy
+      end
+      # their assignment (if it exists) should also be deleted
+      Assignment.for_employee(@employee).each { |item|
+        item.destroy
+      }
+      respond_to do |format|
+        format.html { redirect_to employees_url, notice: 'Employee and user were successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      #the employee should be made inactive
+      @employee.active=false
+      @employee.save
+      #their current assignment terminated
+      @assignment= @employee.current_assignment
+      unless @assignment == nil
+        @assignment.end_date = Date.current
+        @assignment.save
+      end
+      #all future shifts should be deleted.
+      Shift.for_employee(@employee).upcoming.each { |item|
+        item.destroy
+      }
+      
+      respond_to do |format|
+        format.html { redirect_to employees_url, notice: 'Employee could not be deleted, employee is now inactive.' }
+        format.json { head :no_content }
+      end
     end
   end
 
