@@ -1,6 +1,7 @@
-<h1>Editing Shiftjob</h1>
-
+<br>
+<h1 style = "position:absolute; TOP:23px; LEFT:184px; ">Editing Shiftjob</h1>
+<%= link_to 'Show', @shiftjob, :style => "position:absolute; TOP:30px; LEFT:680px; ", :class => "btn btn-info"  %> 
+<%= link_to 'Back', shiftjobs_path, :style => "position:absolute; TOP:30px; LEFT:600px; ", :class => "btn btn-info"  %>
 <%= render 'form', shiftjob: @shiftjob %>
 
-<%= link_to 'Show', @shiftjob %> |
-<%= link_to 'Back', shiftjobs_path %>
+

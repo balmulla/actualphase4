@@ -1,16 +1,19 @@
-<%= form_with(model: shiftjob, local: true) do |form| %>
+<%= form_with(model: shiftjob, local: true, :html => {:style =>"position:absolute; TOP:135px; LEFT:170px;font-size:160%;"}) do |form| %>
   <% if shiftjob.errors.any? %>
+    <div class="col-md-6">
     <div id="error_explanation">
       <h2><%= pluralize(shiftjob.errors.count, "error") %> prohibited this shiftjob from being saved:</h2>
 
       <ul>
       <% shiftjob.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li style="font-size:50%;color:red;"><%= message %></li>
       <% end %>
       </ul>
     </div>
+    </div>
   <% end %>
 
+<div class="col-md-6">
   <div class="field">
     <%= form.label :shift_id %>
     <%= form.number_field :shift_id %>
@@ -22,6 +25,9 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "save", :class => 'btn btn-secondary'%>
   </div>
 <% end %>
+<br>
+<br>
+</div>
