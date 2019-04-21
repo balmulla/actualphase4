@@ -1,6 +1,7 @@
-<h1>Editing Flavor</h1>
-
+<br>
+<h1 style = "position:absolute; TOP:23px; LEFT:184px; ">Editing Flavor</h1>
+<%= link_to 'Show', @flavor, :style => "position:absolute; TOP:30px; LEFT:680px; ", :class => "btn btn-info"  %> 
+<%= link_to 'Back', flavors_path, :style => "position:absolute; TOP:30px; LEFT:600px; ", :class => "btn btn-info"  %>
 <%= render 'form', flavor: @flavor %>
 
-<%= link_to 'Show', @flavor %> |
-<%= link_to 'Back', flavors_path %>
+

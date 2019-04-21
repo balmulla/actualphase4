@@ -53,4 +53,19 @@
       <a href="<%=new_shiftjob_path%>">New Shift Job</a>
     </div>
   </div>
-          </nav>
+  <div class="dropdown">
+    <button class="dropbtn">Flavors</button>
+    <div class="dropdown-content">
+      <a href="<%= flavors_path%>">List Flavors</a>
+      <a href="<%=new_flavor_path%>">New Flavor Job</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Store Flavors</button>
+    <div class="dropdown-content">
+      <a href="<%= storeflavors_path%>">List Store Flavors</a>
+      <a href="<%=new_storeflavor_path%>">New Store Flavor</a>
+    </div>
+  </div>
+</nav>

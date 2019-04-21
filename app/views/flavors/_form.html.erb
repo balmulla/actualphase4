@@ -1,16 +1,19 @@
-<%= form_with(model: flavor, local: true) do |form| %>
+<%= form_with(model: flavor, local: true, :html => {:style =>"position:absolute; TOP:135px; LEFT:170px;font-size:160%;"}) do |form| %>
   <% if flavor.errors.any? %>
+      <div class="col-md-6">
     <div id="error_explanation">
       <h2><%= pluralize(flavor.errors.count, "error") %> prohibited this flavor from being saved:</h2>
 
       <ul>
       <% flavor.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li style="font-size:50%;color:red;"><%= message %></li>
       <% end %>
       </ul>
     </div>
+    </div>
   <% end %>
 
+<div class="col-md-6">
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -22,6 +25,9 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "save", :class => 'btn btn-secondary'%>
   </div>
 <% end %>
+<br>
+<br>
+</div>

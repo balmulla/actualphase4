@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Flavors</h1>
-
-<table>
+<%= link_to 'New Flavor', new_flavor_path , :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info"%>
+<table class="table table-striped" style="font-size:60%;">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Active</th>
       <th colspan="3"></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @flavors.each do |flavor| %>
       <tr>
+        <td><%= flavor.id %></td>
         <td><%= flavor.name %></td>
         <td><%= flavor.active %></td>
         <td><%= link_to 'Show', flavor %></td>
@@ -26,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Flavor', new_flavor_path %>
+

@@ -1,3 +1,6 @@
+<br>
+<br>
+<div style = "position:absolute; LEFT:300px;">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,5 +13,7 @@
   <%= @storeflavor.flavor_id %>
 </p>
 
-<%= link_to 'Edit', edit_storeflavor_path(@storeflavor) %> |
-<%= link_to 'Back', storeflavors_path %>
+<%= link_to 'Edit', edit_storeflavor_path(@storeflavor), :class => "btn btn-info"  %> 
+<%= link_to 'Back', storeflavors_path, :class => "btn btn-info"  %>
+
+</div>
