@@ -34,5 +34,15 @@ FactoryBot.define do
     start_time {Time.now}
     end_time {Time.now+3600}
   end
+  
+  factory :shiftjob do
+    association :shift
+    association :job
+  end
+  
+  factory :job do
+    name {"wash floor"}
+    active {true}
+  end
 
 end

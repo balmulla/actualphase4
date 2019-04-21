@@ -16696,3 +16696,1179 @@ Migrating to CreateShiftjobs (20190419115509)
   [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShiftjob Load (1.3ms)[0m  [1m[34mSELECT  "shiftjobs".* FROM "shiftjobs" WHERE (employee_id = 1) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "shiftjobs" WHERE (job_id = 1)[0m
+Started GET "/" for 78.100.201.225 at 2019-04-21 14:52:36 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (2.1ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 288ms (Views: 280.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-21 14:52:38 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.6ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 14:52:56 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (5.1ms)
+  Rendered partials/_nav.html.erb (2.3ms)
+Completed 200 OK in 214ms (Views: 194.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs/new" for 78.100.201.225 at 2019-04-21 14:53:00 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (21.2ms)
+  Rendered jobs/new.html.erb within layouts/application (23.6ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 87ms (Views: 75.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/jobs" for 78.100.201.225 at 2019-04-21 14:53:06 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SveJMCPZlB3stBpvi8Zoz9rRrrLDkvzruYujYODF3NAfSELwenEGqSeCMxnUH8pwgIoo6e3BnnMRDL3kyIvllQ==", "job"=>{"name"=>"clean dishes", "description"=>"", "active"=>"1"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "clean dishes"], ["description", ""], ["active", 1], ["created_at", "2019-04-21 14:53:06.999085"], ["updated_at", "2019-04-21 14:53:06.999085"]]
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/jobs/1
+Completed 302 Found in 146ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/jobs/1" for 78.100.201.225 at 2019-04-21 14:53:07 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 14:53:09 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 14:53:20 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:19
+  Rendered shifts/index.html.erb within layouts/application (15.9ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 64ms (Views: 53.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 14:53:31 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:19
+  Rendered shifts/index.html.erb within layouts/application (5.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-21 14:53:34 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:15
+  Rendered shiftjobs/index.html.erb within layouts/application (2.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 33ms (Views: 26.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/shiftjobs/new" for 78.100.201.225 at 2019-04-21 14:53:36 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#new as HTML
+  Rendering shiftjobs/new.html.erb within layouts/application
+  Rendered shiftjobs/_form.html.erb (4.3ms)
+  Rendered shiftjobs/new.html.erb within layouts/application (6.3ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 53ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/shiftjobs" for 78.100.201.225 at 2019-04-21 14:53:41 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Qp354a3lSxiEn9SNN9V503G2tLCrVCxcOuI7h5GIa3UyL9gaCZKFEb4V0wIlTmXdMYobAq5g5gnIZniYOvlvg==", "shiftjob"=>{"shift_id"=>"3", "job_id"=>"1"}, "commit"=>"Create Shiftjob"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  Rendering shiftjobs/new.html.erb within layouts/application
+  Rendered shiftjobs/_form.html.erb (3.2ms)
+  Rendered shiftjobs/new.html.erb within layouts/application (4.4ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 49ms (Views: 29.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/shiftjobs" for 78.100.201.225 at 2019-04-21 14:53:48 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nOhP+8HjY6ikpJdtaj3ZmdM7deWnA/Mn0QkQqH1UMZWBS4nk+yxj+jghQasrlTzMcY1L5VeeovU4Br6h0fRZ1w==", "shiftjob"=>{"shift_id"=>"6", "job_id"=>"1"}, "commit"=>"Create Shiftjob"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  Rendering shiftjobs/new.html.erb within layouts/application
+  Rendered shiftjobs/_form.html.erb (2.3ms)
+  Rendered shiftjobs/new.html.erb within layouts/application (3.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 84ms (Views: 79.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-21 14:53:56 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:15
+  Rendered shiftjobs/index.html.erb within layouts/application (2.0ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 14:54:00 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:19
+  Rendered shifts/index.html.erb within layouts/application (5.6ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 14:54:03 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:19
+  Rendered shifts/index.html.erb within layouts/application (5.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-21 14:54:05 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 14:54:06 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:19
+  Rendered shifts/index.html.erb within layouts/application (4.7ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-21 14:54:08 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:15
+  Rendered shiftjobs/index.html.erb within layouts/application (2.1ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-21 14:54:08 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:15
+  Rendered shiftjobs/index.html.erb within layouts/application (2.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 46ms (Views: 43.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shiftjobs/new" for 78.100.201.225 at 2019-04-21 14:54:09 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#new as HTML
+  Rendering shiftjobs/new.html.erb within layouts/application
+  Rendered shiftjobs/_form.html.erb (2.6ms)
+  Rendered shiftjobs/new.html.erb within layouts/application (3.9ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiftjobs/new" for 78.100.201.225 at 2019-04-21 14:54:12 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#new as HTML
+  Rendering shiftjobs/new.html.erb within layouts/application
+  Rendered shiftjobs/_form.html.erb (2.5ms)
+  Rendered shiftjobs/new.html.erb within layouts/application (3.9ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-21 14:54:12 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:15
+  Rendered shiftjobs/index.html.erb within layouts/application (1.9ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 14:54:13 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:19
+  Rendered shifts/index.html.erb within layouts/application (5.5ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 14:54:15 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (2.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 14:54:16 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (2.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/new" for 78.100.201.225 at 2019-04-21 14:54:16 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (2.8ms)
+  Rendered jobs/new.html.erb within layouts/application (4.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/jobs/1" for 78.100.201.225 at 2019-04-21 14:54:20 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZSpyYu9ND7IIn6sHgegJoMIgOxBM75ZCJfKIu6VJ+Pl4ibR91YIP4JQafcHAQOz1YJYFELxyx5DM/SayCemQuw==", "id"=>"1"}
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "shiftjobs" WHERE (job_id = 1)[0m
+  ↳ app/models/job.rb:24
+  [1m[36mJob Destroy (0.4ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/jobs_controller.rb:57
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+Redirected to https://first-test-bmulla.c9users.io/jobs
+Completed 302 Found in 19ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 14:54:20 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/new" for 78.100.201.225 at 2019-04-21 14:54:23 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (2.9ms)
+  Rendered jobs/new.html.erb within layouts/application (4.4ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/jobs" for 78.100.201.225 at 2019-04-21 14:54:31 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gE0eF3f7CILMN+lVwCGX4gQTlzv7DooD7riHgssGvurV8tXXLlOaNgcBwCOf+DVdXkgRYNVd6JtGP5kG40iHrw==", "job"=>{"name"=>"clean floor", "description"=>"", "active"=>"1"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "clean floor"], ["description", ""], ["active", 1], ["created_at", "2019-04-21 14:54:31.366402"], ["updated_at", "2019-04-21 14:54:31.366402"]]
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/jobs/2
+Completed 302 Found in 19ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/jobs/2" for 78.100.201.225 at 2019-04-21 14:54:31 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 14:54:35 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:19
+  Rendered shifts/index.html.erb within layouts/application (5.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 14:55:55 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:20
+  Rendered shifts/index.html.erb within layouts/application (6.2ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 14:56:07 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:20
+  Rendered shifts/index.html.erb within layouts/application (5.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/new" for 78.100.201.225 at 2019-04-21 14:56:08 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.0ms)
+  Rendered jobs/new.html.erb within layouts/application (4.4ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 14:56:09 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (2.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 14:56:09 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 142ms (Views: 140.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/new" for 78.100.201.225 at 2019-04-21 14:56:10 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.6ms)
+  Rendered jobs/new.html.erb within layouts/application (5.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 14:56:14 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (13.3ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/new" for 78.100.201.225 at 2019-04-21 14:56:14 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (2.7ms)
+  Rendered jobs/new.html.erb within layouts/application (4.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 14:56:15 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:20
+  Rendered shifts/index.html.erb within layouts/application (5.3ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-21 14:56:15 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-21 14:56:17 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.4ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:15
+  Rendered shiftjobs/index.html.erb within layouts/application (2.5ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-21 14:56:17 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:15
+  Rendered shiftjobs/index.html.erb within layouts/application (2.0ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shiftjobs/new" for 78.100.201.225 at 2019-04-21 14:56:19 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#new as HTML
+  Rendering shiftjobs/new.html.erb within layouts/application
+  Rendered shiftjobs/_form.html.erb (2.8ms)
+  Rendered shiftjobs/new.html.erb within layouts/application (4.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiftjobs" for 78.100.201.225 at 2019-04-21 14:56:23 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KbBcMUWeNY74nlGr5IbXR+xn1EWS8WFaJLDYffAnsl8AcpS2qw/qttx0ebXYzLs31Wcm+1rlsnNzeslxjop2TA==", "shiftjob"=>{"shift_id"=>"19", "job_id"=>"2"}, "commit"=>"Create Shiftjob"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mShiftjob Create (0.6ms)[0m  [1m[32mINSERT INTO "shiftjobs" ("shift_id", "job_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["shift_id", 19], ["job_id", 2], ["created_at", "2019-04-21 14:56:23.942436"], ["updated_at", "2019-04-21 14:56:23.942436"]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shiftjobs_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/shiftjobs/1
+Completed 302 Found in 21ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/shiftjobs/1" for 78.100.201.225 at 2019-04-21 14:56:24 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT  "shiftjobs".* FROM "shiftjobs" WHERE "shiftjobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:67
+  Rendering shiftjobs/show.html.erb within layouts/application
+  Rendered shiftjobs/show.html.erb within layouts/application (0.9ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 30ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-21 14:56:26 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.2ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:15
+  Rendered shiftjobs/index.html.erb within layouts/application (2.5ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 14:56:57 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/jobs/2" for 78.100.201.225 at 2019-04-21 14:57:03 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"X+4+cVUieuOBVJNg/jHOnBDMDpF+ONqDoYne2fltz0pCTfhub+16sR3RRaa/mSvJsnowkY6li1FIhnDQVc2nCA==", "id"=>"2"}
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "shiftjobs" WHERE (job_id = 1)[0m
+  ↳ app/models/job.rb:24
+  [1m[36mJob Destroy (0.4ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/jobs_controller.rb:57
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+Redirected to https://first-test-bmulla.c9users.io/jobs
+Completed 302 Found in 47ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 14:57:04 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (1.9ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/new" for 78.100.201.225 at 2019-04-21 15:01:41 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (76.4ms)
+  Rendered jobs/new.html.erb within layouts/application (81.7ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 128ms (Views: 112.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/jobs" for 78.100.201.225 at 2019-04-21 15:01:52 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1kjrax6JDADwFxnwswUgI2tk15CJ0tFlL8jSUkQAGv2D9yCrRyGetDshMIbs3IKcMT9Ry6eBs/2HT8zWbE4juA==", "job"=>{"name"=>"cleaning the roof", "description"=>"", "active"=>"1"}, "commit"=>"Create Job"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[36mJob Create (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "cleaning the roof"], ["description", ""], ["active", 1], ["created_at", "2019-04-21 15:01:52.055797"], ["updated_at", "2019-04-21 15:01:52.055797"]]
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/jobs/3
+Completed 302 Found in 90ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/jobs/3" for 78.100.201.225 at 2019-04-21 15:01:52 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.1ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:01:54 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (2.8ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/jobs/3" for 78.100.201.225 at 2019-04-21 15:01:58 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"19eXDwDwiFGBJZtDK36CrzPMAR+JQFNHbn1KUothHnXKdFEQOj+IAx2gTYVq1mf6kXo/H3ndApWHcuRbJ8F2Nw==", "id"=>"3"}
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "shiftjobs" WHERE (job_id = 1)[0m
+  ↳ app/models/job.rb:24
+  [1m[36mJob Destroy (1.0ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/jobs_controller.rb:57
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+Redirected to https://first-test-bmulla.c9users.io/jobs
+Completed 302 Found in 68ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:01:59 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/new" for 78.100.201.225 at 2019-04-21 15:02:01 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.1ms)
+  Rendered jobs/new.html.erb within layouts/application (4.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/jobs" for 78.100.201.225 at 2019-04-21 15:02:08 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z9g58AGHq0u/3b2ro9UJfPJfTAz8hhduWuol2xGG97iaZ/IwWC85/3TrlN38DKvDqATKV9LVdfbybTtfOcjO/Q==", "job"=>{"name"=>"cleaning the sink", "description"=>"", "active"=>"1"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "cleaning the sink"], ["description", ""], ["active", 1], ["created_at", "2019-04-21 15:02:08.961093"], ["updated_at", "2019-04-21 15:02:08.961093"]]
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/jobs/4
+Completed 302 Found in 19ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/jobs/4" for 78.100.201.225 at 2019-04-21 15:02:09 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.3ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:02:12 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:16
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:02:38 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 15:02:43 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:20
+  Rendered shifts/index.html.erb within layouts/application (13.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 48ms (Views: 40.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-21 15:02:51 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:15
+  Rendered shiftjobs/index.html.erb within layouts/application (7.0ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shiftjobs/new" for 78.100.201.225 at 2019-04-21 15:02:53 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#new as HTML
+  Rendering shiftjobs/new.html.erb within layouts/application
+  Rendered shiftjobs/_form.html.erb (2.7ms)
+  Rendered shiftjobs/new.html.erb within layouts/application (4.2ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shiftjobs" for 78.100.201.225 at 2019-04-21 15:02:59 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KYq/BlgveXck0q29HQlgKH1lmDryeFefKujxax76IAQASHeBtr6mTwA4haMhQwxYRGVqhDpshLZ9IuBnYFfkFw==", "shiftjob"=>{"shift_id"=>"20", "job_id"=>"4"}, "commit"=>"Create Shiftjob"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mShiftjob Create (1.3ms)[0m  [1m[32mINSERT INTO "shiftjobs" ("shift_id", "job_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["shift_id", 20], ["job_id", 4], ["created_at", "2019-04-21 15:02:59.638456"], ["updated_at", "2019-04-21 15:02:59.638456"]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shiftjobs_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/shiftjobs/2
+Completed 302 Found in 114ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/shiftjobs/2" for 78.100.201.225 at 2019-04-21 15:03:00 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShiftjob Load (0.4ms)[0m  [1m[34mSELECT  "shiftjobs".* FROM "shiftjobs" WHERE "shiftjobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:67
+  Rendering shiftjobs/show.html.erb within layouts/application
+  Rendered shiftjobs/show.html.erb within layouts/application (1.2ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/shiftjobs/new" for 78.100.201.225 at 2019-04-21 15:03:05 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#new as HTML
+  Rendering shiftjobs/new.html.erb within layouts/application
+  Rendered shiftjobs/_form.html.erb (2.5ms)
+  Rendered shiftjobs/new.html.erb within layouts/application (4.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:03:09 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:03:11 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.8ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/jobs/4" for 78.100.201.225 at 2019-04-21 15:03:14 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n2ax0MkiG6czEddeVBY4n3sVZbm1wfeZEL7AJPwX+riCxXfP8+0b9a+UAZgVvt3K2aNbuUVcpkv5sW4tULeS+g==", "id"=>"4"}
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "shiftjobs" WHERE (job_id = 1)[0m
+  ↳ app/models/job.rb:24
+  [1m[36mJob Destroy (0.3ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/jobs_controller.rb:57
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+Redirected to https://first-test-bmulla.c9users.io/jobs
+Completed 302 Found in 95ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:03:14 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/new" for 78.100.201.225 at 2019-04-21 15:06:14 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.0ms)
+  Rendered jobs/new.html.erb within layouts/application (4.4ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 44ms (Views: 30.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/jobs" for 78.100.201.225 at 2019-04-21 15:06:21 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ILKpHT66x3klVls4uRqw+ZkJFgoOVe7jL2KbKVNkFmF1DWLdZxJVze5gck7mwxJGw1KQUSAGjHuH5YWteyovJA==", "job"=>{"name"=>"cleaning the ears", "description"=>"", "active"=>"1"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[36mJob Create (1.3ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "cleaning the ears"], ["description", ""], ["active", 1], ["created_at", "2019-04-21 15:06:21.613783"], ["updated_at", "2019-04-21 15:06:21.613783"]]
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/jobs/5
+Completed 302 Found in 132ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/jobs/5" for 78.100.201.225 at 2019-04-21 15:06:22 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.3ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 35ms (Views: 30.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:06:29 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (3.1ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/jobs/5" for 78.100.201.225 at 2019-04-21 15:06:34 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vb2tWIYl3+buXYkhhfMU2WwF/8OnNeh3GgFY1Hbdl2CgHmtHvOrftHLYX+fEW/GMzrPBw1eouaXzDvbd2n3/Ig==", "id"=>"5"}
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "shiftjobs" WHERE (job_id = 5)[0m
+  ↳ app/models/job.rb:24
+  [1m[36mJob Destroy (0.3ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/jobs_controller.rb:57
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+Redirected to https://first-test-bmulla.c9users.io/jobs
+Completed 302 Found in 138ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:06:34 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/new" for 78.100.201.225 at 2019-04-21 15:06:37 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.3ms)
+  Rendered jobs/new.html.erb within layouts/application (4.7ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/jobs" for 78.100.201.225 at 2019-04-21 15:06:44 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9hCSRNwHFgpqKa0k5rDYzU81HExDYIZKGd35F81SFXGjr1mEha+EvqEfhFK5aXpyFW6aF20z5NKxWueT5RwsNA==", "job"=>{"name"=>"cleaning the house", "description"=>"", "active"=>"1"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[36mJob Create (1.1ms)[0m  [1m[32mINSERT INTO "jobs" ("name", "description", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "cleaning the house"], ["description", ""], ["active", 1], ["created_at", "2019-04-21 15:06:44.857098"], ["updated_at", "2019-04-21 15:06:44.857098"]]
+  ↳ app/controllers/jobs_controller.rb:30
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/jobs/6
+Completed 302 Found in 87ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/jobs/6" for 78.100.201.225 at 2019-04-21 15:06:45 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.3ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:06:47 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 15:06:50 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:20
+  Rendered shifts/index.html.erb within layouts/application (11.7ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 43ms (Views: 36.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/shiftjobs/new" for 78.100.201.225 at 2019-04-21 15:06:58 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#new as HTML
+  Rendering shiftjobs/new.html.erb within layouts/application
+  Rendered shiftjobs/_form.html.erb (3.1ms)
+  Rendered shiftjobs/new.html.erb within layouts/application (4.7ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 52ms (Views: 45.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/shiftjobs" for 78.100.201.225 at 2019-04-21 15:07:03 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6C+C9XpOrB30JpZ7nsYbT0pXUqZGZF4rSIOK6bw4ju71jETqQIGsT2ijQL3fbv4a6OFsprb5D/mhjCTgEJjmrA==", "shiftjob"=>{"shift_id"=>"16", "job_id"=>"6"}, "commit"=>"Create Shiftjob"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE "shifts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[36mShiftjob Create (0.5ms)[0m  [1m[32mINSERT INTO "shiftjobs" ("shift_id", "job_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["shift_id", 16], ["job_id", 6], ["created_at", "2019-04-21 15:07:03.125594"], ["updated_at", "2019-04-21 15:07:03.125594"]]
+  ↳ app/controllers/shiftjobs_controller.rb:30
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shiftjobs_controller.rb:30
+Redirected to https://first-test-bmulla.c9users.io/shiftjobs/3
+Completed 302 Found in 25ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/shiftjobs/3" for 78.100.201.225 at 2019-04-21 15:07:04 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT  "shiftjobs".* FROM "shiftjobs" WHERE "shiftjobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shiftjobs_controller.rb:67
+  Rendering shiftjobs/show.html.erb within layouts/application
+  Rendered shiftjobs/show.html.erb within layouts/application (1.1ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-21 15:07:05 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:15
+  Rendered shiftjobs/index.html.erb within layouts/application (2.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-21 15:07:09 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:15
+  Rendered shiftjobs/index.html.erb within layouts/application (2.9ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:07:11 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.9ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:07:12 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.7ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/jobs/6" for 78.100.201.225 at 2019-04-21 15:07:15 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sDBnCLe9rrE8Ai1PPVjtLtRVRdAPN+C3Ec0Vnk9GfnKtk6EXjXKu46CH+4l88Ah7duN70P+qsWX4wruX4+YWMA==", "id"=>"6"}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "shiftjobs" WHERE (job_id = 6)[0m
+  ↳ app/models/job.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/jobs_controller.rb:57
+Redirected to https://first-test-bmulla.c9users.io/jobs
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:07:16 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:09:42 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (9.5ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 46ms (Views: 36.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/jobs/6" for 78.100.201.225 at 2019-04-21 15:09:45 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v36vBhA17nosBJ0U2OHIEF1wxkXzqK0D+tWyQbL82WWi3WkZKvruKLCBS9KZSS1F/8b4RQM1/NET2hxIHlyxJw==", "id"=>"6"}
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:81
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:64
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "shiftjobs" WHERE (job_id = 6)[0m
+  ↳ app/models/job.rb:22
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/jobs_controller.rb:64
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:69
+  [1m[36mJob Update (69.0ms)[0m  [1m[33mUPDATE "jobs" SET "active" = ?, "updated_at" = ? WHERE "jobs"."id" = ?[0m  [["active", 0], ["updated_at", "2019-04-21 15:09:45.670757"], ["id", 6]]
+  ↳ app/controllers/jobs_controller.rb:69
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:69
+Redirected to https://first-test-bmulla.c9users.io/shifts
+Completed 302 Found in 103ms (ActiveRecord: 83.3ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 15:09:46 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:20
+  Rendered shifts/index.html.erb within layouts/application (12.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 44ms (Views: 36.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-21 15:09:55 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:20
+  Rendered shifts/index.html.erb within layouts/application (6.1ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-21 15:09:58 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (2.9ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
