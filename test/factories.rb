@@ -44,5 +44,8 @@ FactoryBot.define do
     name {"wash floor"}
     active {true}
   end
-
+  factory :flavor do
+    name {"vanilla"}
+    active {true}
+  end
 end

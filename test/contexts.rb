@@ -15,6 +15,7 @@ module Contexts
   include Contexts::ShiftContexts
   include Contexts::ShiftjobContexts
   include Contexts::JobContexts
+  include Contexts::FlavorContexts
   
   def create_contexts
     create_employees
@@ -23,6 +24,7 @@ module Contexts
     create_shifts
     create_jobs
     create_shiftjobs
+    create_flavors
   end
   
   def destroy_contexts
@@ -32,6 +34,7 @@ module Contexts
     destroy_shifts
     destroy_shiftjobs
     destroy_jobs
+    destroy_flavors
   end
   
 

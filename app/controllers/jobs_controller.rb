@@ -69,8 +69,6 @@ class JobsController < ApplicationController
         @job.save
         format.html { redirect_to jobs_url, notice: @job.errors.full_messages}
         format.json { head :no_content }
-        
-        
       end
     end
   end
