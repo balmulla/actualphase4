@@ -20551,3 +20551,55 @@ Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.3ms)
   [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE ((select count (distinct shiftjobs.shift_id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE ((select count (distinct shiftjobs.shift_id FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id)) > 0) LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mShift Load (0.8ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE ((select count (distinct shiftjobs.shift_id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/shifts" for 78.100.201.225 at 2019-04-24 16:13:38 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:20
+  Rendered shifts/index.html.erb within layouts/application (13.2ms)
+  Rendered partials/_nav.html.erb (1.5ms)
+Completed 200 OK in 329ms (Views: 305.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-24 16:13:41 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:25
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 13], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:35
+  Rendered employees/index.html.erb within layouts/application (160.2ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 220ms (Views: 209.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assignments" for 78.100.201.225 at 2019-04-24 16:13:43 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AssignmentsController#index as HTML
+  Rendering assignments/index.html.erb within layouts/application
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments"[0m
+  ↳ app/views/assignments/index.html.erb:21
+  Rendered assignments/index.html.erb within layouts/application (11.7ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 98ms (Views: 85.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-24 16:13:46 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:17
+  Rendered shiftjobs/index.html.erb within layouts/application (9.0ms)
+  Rendered partials/_nav.html.erb (1.3ms)
+Completed 200 OK in 72ms (Views: 64.9ms | ActiveRecord: 1.0ms)
+
+
