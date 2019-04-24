@@ -1,6 +1,9 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, :only => [:index, :show]
+  # before_action :set_user, only: [:show, :edit, :update, :destroy]
+  # before_action :logged_in_user
+  # before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
   # GET /employees
   # GET /employees.json
@@ -101,5 +104,16 @@ class EmployeesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_params
        params.require(:employee).permit(:phone, :active, :first_name, :last_name, :ssn, :date_of_birth, :role, user_attributes: [:id, :email, :password])
+    end
+    
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+    
+    def correct_user
+      redirect_to(root_url) unless @user == current_user
     end
 end

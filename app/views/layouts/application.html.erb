@@ -77,7 +77,12 @@ A:hover { COLOR: #A2A4A4; TEXT-DECORATION: none; font-weight: none }
 	    	    	<%= link_to 'Home', home_path %>&nbsp;&nbsp;::&nbsp;&nbsp;
               <%= link_to 'About the Creamery', about_path %>&nbsp;&nbsp;::&nbsp;&nbsp;
             	<%= link_to 'Contact Us', contact_path %>&nbsp;&nbsp;::&nbsp;&nbsp;
-            	<%= link_to 'Privacy Policy', privacy_path %>
+            	<%= link_to 'Privacy Policy', privacy_path %>&nbsp;&nbsp;::&nbsp;&nbsp;
+            	<% if logged_in? %>
+      					<%= link_to "Logout", logout_path %>
+    					<% else %>
+      					<%= link_to "Login", login_path %>
+    					<% end %>
   		    </div>
 	  	    <div class="col-md-2">
   	  	  </div>

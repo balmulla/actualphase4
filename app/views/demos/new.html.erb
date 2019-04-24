@@ -1,0 +1,16 @@
+<%= form_for(:demo, url: demos_path, :html => {:style =>"position:absolute; TOP:135px; LEFT:170px;font-size:160%;"}) do |f| %>
+
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+
+  <div class="field ">
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  </div>
+  <div class="field ">
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  </div>
+  <%= f.submit "Login", :class => 'btn btn-secondary' %>
+<% end %>
