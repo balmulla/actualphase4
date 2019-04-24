@@ -20440,3 +20440,114 @@ Processing by AssignmentsController#index as HTML
 Completed 200 OK in 137ms (Views: 134.5ms | ActiveRecord: 0.5ms)
 
 
+  [1m[36mShift Load (0.7ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (1.0ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.5ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" ORDER BY "shifts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "shiftjobs" WHERE (shift_id = 12)[0m
+  [1m[36mShift Load (0.7ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.6ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.7ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.6ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.2ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.6ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE (select count (shiftjob.shift_id = shift.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.6ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE (select count (shiftjobs.shift_id = shift.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.6ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE (select count (shiftjobs.shift_id = shifts.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE ((select count (shiftjobs.shift_id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.7ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (date < '2019-04-24') LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 78.100.201.225 at 2019-04-24 14:25:26 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (2.4ms)
+  Rendered partials/_nav.html.erb (1.5ms)
+Completed 200 OK in 309ms (Views: 300.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-24 14:25:27 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.8ms)
+  Rendered partials/_nav.html.erb (1.3ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shifts" for 78.100.201.225 at 2019-04-24 14:25:40 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftsController#index as HTML
+  Rendering shifts/index.html.erb within layouts/application
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT "shifts".* FROM "shifts"[0m
+  ↳ app/views/shifts/index.html.erb:20
+  Rendered shifts/index.html.erb within layouts/application (31.8ms)
+  Rendered partials/_nav.html.erb (65.4ms)
+Completed 200 OK in 138ms (Views: 124.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/jobs" for 78.100.201.225 at 2019-04-24 14:25:43 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/views/jobs/index.html.erb:17
+  Rendered jobs/index.html.erb within layouts/application (8.8ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 121ms (Views: 113.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-24 14:27:07 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:17
+  Rendered shiftjobs/index.html.erb within layouts/application (9.1ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 308ms (Views: 291.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-24 14:27:10 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:17
+  Rendered shiftjobs/index.html.erb within layouts/application (2.7ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shiftjobs" for 78.100.201.225 at 2019-04-24 14:27:14 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShiftjobsController#index as HTML
+  Rendering shiftjobs/index.html.erb within layouts/application
+  [1m[36mShiftjob Load (0.3ms)[0m  [1m[34mSELECT "shiftjobs".* FROM "shiftjobs"[0m
+  ↳ app/views/shiftjobs/index.html.erb:17
+  Rendered shiftjobs/index.html.erb within layouts/application (2.3ms)
+  Rendered partials/_nav.html.erb (1.1ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" ORDER BY "shifts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "shiftjobs" WHERE (shift_id = 12)[0m
+  [1m[36mShift Load (0.6ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (id = 16) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (id = 16) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (id = 16) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.5ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (id = 16) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (id = 16) ORDER BY "shifts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (id = 16) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE (id = 16) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE ((select distinct  count (shiftjobs.shift_id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.5ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE ((select distinct  count (shiftjobs.shift_id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE ((select count (distinct shiftjobs.shift_id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.7ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE ((select count (distinct shifts.id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.3ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE ((select count (distinct shiftjobs.shift_id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.4ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" INNER JOIN "shiftjobs" ON "shiftjobs"."shift_id" = "shifts"."id" WHERE ((select count (distinct shiftjobs.shift_id FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id)) > 0) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mShift Load (0.8ms)[0m  [1m[34mSELECT  "shifts".* FROM "shifts" WHERE ((select count (distinct shiftjobs.shift_id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) > 0) LIMIT ?[0m  [["LIMIT", 11]]

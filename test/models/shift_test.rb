@@ -26,6 +26,8 @@ class ShiftTest < ActiveSupport::TestCase
       create_employees
       create_assignments
       create_shifts
+      create_jobs
+      create_shiftjobs
     end
 
     teardown do
@@ -33,6 +35,8 @@ class ShiftTest < ActiveSupport::TestCase
       remove_employees
       remove_assignments
       remove_shifts
+      remove_jobs
+      remove_shiftjobs
       
     end
     
@@ -71,8 +75,37 @@ class ShiftTest < ActiveSupport::TestCase
       
     end
     
+    should "return true for shift_kath2.completed?" do
+      assert_equal true, @shift_kath2.completed?
+    end
     
-
+    should "return true for shift_cindy.completed?" do
+      assert_equal true, @shift_cindy.completed?
+    end
+    
+    should "return false for shift_cindy2.completed?" do
+      assert_equal false, @shift_cindy2.completed?
+    end
+    
+    should "return false for shift_ben.completed?" do
+      assert_equal false, @shift_ben.completed?
+    end
+    
+    should "return shift_kath2 and hift_cindy for Shift.completed" do
+      assert_equal Shift.completed, [@shift_kath2, @shift_cindy]
+    end
+    
+    should "return others for Shift.incomplete" do
+      assert_equal Shift.incomplete, [@shift_kath, @shift_cindy2, @shift_ben , @shift_ben2]
+    end
+    
+    should "order by_store" do
+      assert_equal Shift.by_store, [@shift_cindy, @shift_cindy2, @shift_ben , @shift_ben2, @shift_kath, @shift_kath2]
+    end
+    
+    should "order by_employee" do
+      assert_equal Shift.by_employee, [@shift_cindy, @shift_cindy2, @shift_kath, @shift_kath2, @shift_ben , @shift_ben2]
+    end
     
   end
   

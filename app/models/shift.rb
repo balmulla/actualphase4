@@ -27,7 +27,13 @@ class Shift < ApplicationRecord
   #methods
   
   #have a method called 'completed?' which returns true or false depending on whether or not there are any jobs associated with that particular shift
-
+  def completed?
+    @result=true
+    if (Shiftjob.where("shift_id = ?", self.id).count ==0)
+      @result=false
+    end
+    @result
+  end
   def start_now
     self.update_attribute(:start_time, Time.now)
   end
@@ -47,9 +53,14 @@ class Shift < ApplicationRecord
   scope :chronological, -> { order('date ASC') }
   scope :by_store,      -> { joins(:assignment).joins(:store).order('name') }
   scope :by_employee,   -> { joins(:assignment).joins(:employee).order('last_name, first_name') }
-  
+  # scope :completed, -> {where(self.completed?)}
+  scope :completed,   -> { where('(select count (distinct shiftjobs.shift_id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) > 0' )}
+  scope :incomplete,   -> {where('(select count (distinct shiftjobs.shift_id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) <= 0' )}
+   
+  # scope :completed,   -> { joins(:shiftjobs).count("distinct shiftjobs.shift_id").where("shiftjobs.shift_id = shifts.id")
+  # scope :completed,   -> { joins(:shiftjobs).where('(select count (distinct shiftjobs.shift_id) FROM shiftjobs WHERE shiftjobs.shift_id = shifts.id) > 0' )}
+
   private
-  
   def assignment_is_current
     if assignment_id != nil
       assignment = Assignment.find(self.assignment_id)
