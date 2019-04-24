@@ -7,6 +7,12 @@ module DemosHelper
         @current_user ||=  User.find_by(id: session[:user_id])
     end
     
+    def current_user_role
+        @current_user = current_user
+        @role = @current_user.employee.role
+        return @role
+    end
+    
     def logged_in?
        !current_user.nil?
     end

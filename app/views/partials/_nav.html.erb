@@ -8,7 +8,9 @@
     <button class="dropbtn">Employees</button>
     <div class="dropdown-content">
       <a href="<%= employees_path%>">List Employees</a>
-      <a href="<%=new_employee_path%>">New Employee</a>
+      <% if @role == "admin" %>
+        <a href="<%=new_employee_path%>">New Employee</a>
+      <% end %>
     </div>
   </div>
   

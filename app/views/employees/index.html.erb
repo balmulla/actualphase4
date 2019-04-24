@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Employees</h1>
-<%= link_to 'New Employee', new_employee_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info"%>
+<% @role = current_user_role %>
+<% if @role == "admin" %>
+  <%= link_to 'New Employee', new_employee_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info"%>
+<% end %>
 
 <table class="table table-striped" style="font-size:60%;">
   <thead>
@@ -16,8 +19,10 @@
         <th>active</th>
         <th>email</th>
         <th></th>
+        <% if @role == "admin" %>
         <th></th>
         <th></th>
+        <% end %>
     </tr>
   </thead>
 
@@ -36,8 +41,10 @@
                  <%= employee.user.email %>
             <% end %></td>
         <td><%= link_to 'Show', employee %></td>
+        <% if @role == "admin" %>
         <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
         <td><%= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

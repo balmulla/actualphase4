@@ -1,14 +1,23 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, :only => [:index, :show]
-  # before_action :set_user, only: [:show, :edit, :update, :destroy]
-  # before_action :logged_in_user
-  # before_action :correct_user, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user
+  #edit, update, destroy, create admin only
+  before_action :only_admin, only: [:edit, :update, :destroy, :create]
+  #show, employee, admin, manager
+  before_action :for_show, only: [:show]
+  #index, manager, admin
+  before_action :for_index, only: [:index]
 
   # GET /employees
   # GET /employees.json
   def index
-    @employees = Employee.all
+    @role = current_user_role
+    if @role == "manager" && current_user.employee.current_assignment
+      @employees = Employee.for_store(current_user.employee.current_assignment.store_id)
+    else
+      @employees = Employee.all
+    end
   end
 
   # GET /employees/1
@@ -113,7 +122,42 @@ class EmployeesController < ApplicationController
       end
     end
     
-    def correct_user
-      redirect_to(root_url) unless @user == current_user
+    #methods for authorisation
+    
+    #admins can do everything
+    
+
+    def only_admin
+      @role = current_user_role
+      unless @role == "admin"
+        # redirect_to(root_url) 
+        respond_to do |format|
+          format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+          format.json { head :no_content }
+        end
+      end
+    end
+    
+    #show definition
+    
+    def for_show
+    @role = current_user_role
+      unless @role == "admin" || @employee == current_user.employee || (@role == "manager" && @employee.current_assignment && current_user.employee.current_assignment && @employee.current_assignment.store_id == current_user.employee.current_assignment.store_id)
+        # redirect_to(root_url) 
+        respond_to do |format|
+          format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+          format.json { head :no_content }
+        end
+      end      
+    end
+  def for_index
+      @role = current_user_role
+      unless @role == "admin" || @role == "manager"
+        # redirect_to(root_url) 
+        respond_to do |format|
+          format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+          format.json { head :no_content }
+        end
+      end
     end
 end

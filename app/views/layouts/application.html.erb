@@ -40,22 +40,27 @@ A:hover { COLOR: #A2A4A4; TEXT-DECORATION: none; font-weight: none }
 	    </div>
 	    
 	    <!--navbar-->
+	 		<% if logged_in? %>
 	    <div class="row">
     		<div class="col-md-2 bg-dark">
 		    </div>
 		    <div class="col-md-8 bg-dark">
-
-
-
-
-		      <%= render :partial => "partials/nav" %>
-
-
+					<%= render :partial => "partials/nav" %>
 	  		</div>
 		    <div class="col-md-2 bg-dark">
 		    </div>
 		  </div>
-
+		   <% else %>
+	    <div class="row">
+    		<div class="col-md-4 bg-dark">
+		    </div>
+		    <div class="col-md-4 bg-dark">
+		    	<%= render :partial => "partials/nav2" %>
+	  		</div>
+		    <div class="col-md-4 bg-dark">
+		    </div>
+		  </div>
+				<% end %>
 	    
     	<div class="row">
 		    <div class="col-md-2">
