@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Assignments</h1>
+<% @role = current_user_role %>
+<% if @role == "admin" %>
 <%= link_to 'New Assignment', new_assignment_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info" %>
+<% end %>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -12,8 +15,10 @@
         <th>End Date</th>
         <th>Pay Level</th>
         <th></th>
+        <% if @role == "admin" %>
         <th></th>
         <th></th>
+        <% end %>
     </tr>
   </thead>
 
@@ -27,8 +32,10 @@
         <td><%= assignment.end_date %></td>
         <td><%= assignment.pay_level %></td>
         <td><%= link_to 'Show', assignment %></td>
+        <% if @role == "admin" %>
         <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
         <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

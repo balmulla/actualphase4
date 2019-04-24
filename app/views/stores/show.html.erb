@@ -47,9 +47,13 @@
   <strong>Active:</strong>
   <%= @store.active %>
 </p>
-
-
+<% @role = nil %>
+<% if logged_in? %>
+  <% @role = current_user_role %>
+<% end %>
+<% if @role == "admin" %>
 <%= link_to 'Edit', edit_store_path(@store), :class => "btn btn-info"  %> 
+<% end %>
 <%= link_to 'Back', stores_path, :class => "btn btn-info"  %>
 
 </div>

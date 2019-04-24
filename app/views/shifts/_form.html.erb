@@ -12,11 +12,20 @@
     </div>
     </div>
   <% end %>
+<%
+    @role = current_user_role 
+    if @role == "manager"
+       @assignments=Assignment.for_store(current_user.employee.current_assignment.store_id)
+     end
+    if @role == "admin"
+      @assignments=Assignment.all
+    end
+%>
 
 <div class="col-md-6">
   <div class="field">
     <%= form.label :assignment_id, :style => "position:relative;" %>
-    <%= form.number_field :assignment_id, :style => "position:relative;" %>
+    <%= form.collection_select(:assignment_id, @assignments, :id, :id) %>
   </div>
 
   <div class="field">

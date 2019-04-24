@@ -3,7 +3,7 @@ class EmployeesController < ApplicationController
   skip_before_action :verify_authenticity_token, :only => [:index, :show]
   before_action :logged_in_user
   #edit, update, destroy, create admin only
-  before_action :only_admin, only: [:edit, :update, :destroy, :create]
+  before_action :only_admin, only: [:edit, :update, :destroy, :create, :new]
   #show, employee, admin, manager
   before_action :for_show, only: [:show]
   #index, manager, admin
@@ -150,7 +150,7 @@ class EmployeesController < ApplicationController
         end
       end      
     end
-  def for_index
+    def for_index
       @role = current_user_role
       unless @role == "admin" || @role == "manager"
         # redirect_to(root_url) 

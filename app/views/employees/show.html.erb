@@ -44,9 +44,10 @@
                  <%= @employee.user.email %>
             <% end %>
 </p>
-
-
+<% @role = current_user_role %>
+<% if @role == "admin" %>
 <%= link_to 'Edit', edit_employee_path(@employee), :class => "btn btn-info"  %> 
+<% end %>
 <%= link_to 'Back', employees_path, :class => "btn btn-info"  %>
 
 </div>

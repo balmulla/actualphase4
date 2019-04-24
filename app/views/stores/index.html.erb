@@ -1,7 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Stores</h1>
+<% @role = nil %>
+<% if logged_in? %>
+  <% @role = current_user_role %>
+<% end %>
+<% if @role == "admin" %>
 <%= link_to 'New Store', new_store_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info" %>
+<% end %>
 <table class="table table-striped" style="font-size:60%;">
   <thead>
     <tr>
@@ -16,8 +22,10 @@
         <th>longitude</th>
         <th>active</th>
         <th></th>
+        <% if @role == "admin" %>
         <th></th>
         <th></th>
+        <% end %>
     </tr>
   </thead>
 
@@ -35,8 +43,10 @@
         <td><%= store.longitude %></td>
         <td><%= store.active %></td>
         <td><%= link_to 'Show', store %></td>
+        <% if @role == "admin" %>
         <td><%= link_to 'Edit', edit_store_path(store) %></td>
         <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

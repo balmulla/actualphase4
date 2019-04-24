@@ -1,10 +1,15 @@
 class StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy]
+  before_action :only_admin, only: [:edit, :update, :destroy, :create, :new]
 
   # GET /stores
   # GET /stores.json
   def index
-    @stores = Store.all
+    if logged_in?
+      @stores = Store.all
+    else
+      @stores = Store.active
+    end
   end
 
   # GET /stores/1
@@ -71,5 +76,19 @@ class StoresController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def store_params
       params.require(:store).permit(:name, :street, :city, :state, :zip, :phone, :latitude, :longitude, :active)
+    end
+    
+    #admins can do everything
+    
+
+    def only_admin
+      @role = current_user_role
+      unless @role == "admin"
+        # redirect_to(root_url) 
+        respond_to do |format|
+          format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+          format.json { head :no_content }
+        end
+      end
     end
 end

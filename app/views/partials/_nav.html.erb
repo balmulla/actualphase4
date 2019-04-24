@@ -18,7 +18,9 @@
     <button class="dropbtn">Stores</button>
     <div class="dropdown-content">
       <a href="<%= stores_path%>">List Stores</a>
+      <% if @role == "admin" %>
       <a href="<%=new_store_path%>">New Store</a>
+      <% end %>
     </div>
   </div>            
 
@@ -28,7 +30,9 @@
     <button class="dropbtn">Assignments</button>
     <div class="dropdown-content">
       <a href="<%= assignments_path%>">List Assignments</a>
+      <% if @role == "admin" %>
       <a href="<%=new_assignment_path%>">New Assignment</a>
+      <% end %>
     </div>
   </div>
   
