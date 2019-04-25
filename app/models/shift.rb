@@ -61,7 +61,7 @@ class Shift < ApplicationRecord
   
   def no_past_destroy
       unless date >= Date.current
-        errors.add(:base, 'cannot delete past assignments')
+        errors.add(:base, 'cannot delete past shift')
       end
 
   end

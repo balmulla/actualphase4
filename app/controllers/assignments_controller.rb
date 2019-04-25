@@ -79,10 +79,24 @@ class AssignmentsController < ApplicationController
   # DELETE /assignments/1
   # DELETE /assignments/1.json
   def destroy
-    @assignment.destroy
-    respond_to do |format|
-      format.html { redirect_to assignments_url, notice: 'Assignment was successfully destroyed.' }
-      format.json { head :no_content }
+    if (@assignment.shifts.past.length==0)
+      @assignment.destroy
+      respond_to do |format|
+        format.html { redirect_to assignments_url, notice: 'Assignment was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      #we terminate
+      @assignment.end_date=Date.current
+      @assignment.save
+      @upcomingshifts=@assignment.shifts.upcoming
+      @upcomingshifts.each do |s|
+        s.destroy
+      end
+      respond_to do |format|
+        format.html { redirect_to assignments_url, notice: 'Assignment was terminated.' }
+        format.json { head :no_content }
+      end
     end
   end
 
