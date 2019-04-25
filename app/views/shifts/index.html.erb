@@ -2,6 +2,57 @@
 
 <h1>Shifts</h1>
 <%= link_to 'New Shift', new_shift_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info"%>
+<div class="dropdown">
+    <button class="dropbtn">filters</button>
+    <div class="dropdown-content">
+      <a href="<%= shifts_path(:upcoming => true) %>">Upcoming</a>
+      <a href="<%= shifts_path(:past => true) %>">Past</a>
+      <a href="<%= shifts_path(:by_store => true) %>">By store</a>
+      <a href="<%= shifts_path(:by_employee => true) %>">By employee</a>
+      <a href="<%= shifts_path(:chronological => true) %>">Chronological</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">for store</button>
+    <div class="dropdown-content">
+      <% Store.all.each do |s| %>
+      <a href="<%= shifts_path(:for_store => s.id) %>"><%= s.id %></a>
+      <% end %>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">for employee</button>
+    <div class="dropdown-content">
+      <% Employee.all.each do |s| %>
+      <a href="<%= shifts_path(:for_employee => s.id) %>"><%= s.id %></a>
+      <% end %>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">for next x days</button>
+    <div class="dropdown-content">
+      <a href="<%= shifts_path(:for_next_days => 1) %>"><%= 1 %></a>
+      <a href="<%= shifts_path(:for_next_days => 5) %>"><%= 5 %></a>
+      <a href="<%= shifts_path(:for_next_days => 10) %>"><%= 10 %></a>
+      <a href="<%= shifts_path(:for_next_days => 25) %>"><%= 25 %></a>
+      <a href="<%= shifts_path(:for_next_days => 50) %>"><%= 50 %></a>
+      <a href="<%= shifts_path(:for_next_days => 100) %>"><%= 100 %></a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">for past x days</button>
+    <div class="dropdown-content">
+      <a href="<%= shifts_path(:for_past_days => 1) %>"><%= 1 %></a>
+      <a href="<%= shifts_path(:for_past_days => 5) %>"><%= 5 %></a>
+      <a href="<%= shifts_path(:for_past_days => 10) %>"><%= 10 %></a>
+      <a href="<%= shifts_path(:for_past_days => 25) %>"><%= 25 %></a>
+      <a href="<%= shifts_path(:for_past_days => 50) %>"><%= 50 %></a>
+      <a href="<%= shifts_path(:for_past_days => 100) %>"><%= 100 %></a>
+    </div>
+  </div>
 <table class="table table-striped" style="font-size:60%;">
   <thead>
     <tr>

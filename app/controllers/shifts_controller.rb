@@ -20,6 +20,15 @@ class ShiftsController < ApplicationController
     if @role == "admin"
       @shifts = Shift.all
     end
+    @shifts = @shifts.upcoming(params[:upcoming]) if params[:upcoming].present?
+    @shifts = @shifts.past(params[:past]) if params[:past].present?
+    @shifts = @shifts.by_store(params[:by_store]) if params[:by_store].present?
+    @shifts = @shifts.by_employee(params[:by_employee]) if params[:by_employee].present?
+    @shifts = @shifts.chronological(params[:chronological]) if params[:chronological].present?
+    @shifts = @shifts.for_store(params[:for_store]) if params[:for_store].present?
+    @shifts = @shifts.for_employee(params[:for_employee]) if params[:for_employee].present?
+    @shifts = @shifts.for_next_days((params[:for_next_days]).to_i) if params[:for_next_days].present?
+    @shifts = @shifts.for_past_days((params[:for_past_days]).to_i) if params[:for_past_days].present?
     
   end
 

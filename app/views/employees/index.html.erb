@@ -1,3 +1,10 @@
+<% OpenStruct.new(a: 'b') 
+JSON.parse({ a: { b: 'c' } }.to_json, object_class: OpenStruct)
+
+
+%>
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Employees</h1>
@@ -5,7 +12,27 @@
 <% if @role == "admin" %>
   <%= link_to 'New Employee', new_employee_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info"%>
 <% end %>
-
+<div class="dropdown">
+    <button class="dropbtn">filters</button>
+    <div class="dropdown-content">
+      <a href="<%= employees_path(:active => true) %>">Active</a>
+      <a href="<%= employees_path(:inactive => true) %>">Inactive</a>
+      <a href="<%= employees_path(:younger_than_18 => true) %>">Younger than 18</a>
+      <a href="<%= employees_path(:is_18_or_older => true) %>">18 or older</a>
+      <a href="<%= employees_path(:regulars => true) %>">Regulars</a>
+      <a href="<%= employees_path(:managers => true) %>">Managers</a>
+      <a href="<%= employees_path(:admins => true) %>">Admins</a>
+      <a href="<%= employees_path(:alphabetical => true) %>">Alphabetical</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">for store</button>
+    <div class="dropdown-content">
+      <% Store.all.each do |s| %>
+      <a href="<%= employees_path(:for_store => s.id) %>"><%= s.id %></a>
+      <% end %>
+    </div>
+  </div>
 <table class="table table-striped" style="font-size:60%;">
   <thead>
     <tr>

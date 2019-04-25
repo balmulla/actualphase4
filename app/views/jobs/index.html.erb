@@ -5,6 +5,14 @@
 <% if @role == "admin" %>
 <%= link_to 'New Job', new_job_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info"%>
 <% end %>
+<div class="dropdown">
+    <button class="dropbtn">filters</button>
+    <div class="dropdown-content">
+      <a href="<%= jobs_path(:active => true) %>">Active</a>
+      <a href="<%= jobs_path(:inactive => true) %>">Inactive</a>
+      <a href="<%= jobs_path(:alphabetical => true) %>">Alphabetical</a>
+    </div>
+  </div>
 <table class="table table-striped" style="font-size:60%;">
   <thead>
     <tr>

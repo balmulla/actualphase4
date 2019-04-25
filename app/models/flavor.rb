@@ -9,5 +9,5 @@ class Flavor < ApplicationRecord
     #scopes
     scope :active, -> { where(active: true) }
     scope :inactive, -> { where(active: false) }
-    scope :alphabetically, -> { order('name ASC') }
+    scope :alphabetical, -> { order('name ASC') }
 end

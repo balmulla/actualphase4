@@ -20,6 +20,16 @@ class AssignmentsController < ApplicationController
     if @role == "admin"
       @assignments = Assignment.all
     end
+    @assignments = @assignments.current(params[:current]) if params[:current].present?
+    @assignments = @assignments.past(params[:past]) if params[:past].present?
+    @assignments = @assignments.by_store(params[:by_store]) if params[:by_store].present?
+    @assignments = @assignments.by_employee(params[:by_employee]) if params[:by_employee].present?
+    @assignments = @assignments.chronological(params[:chronological]) if params[:chronological].present?
+    @assignments = @assignments.for_store(params[:for_store]) if params[:for_store].present?
+    @assignments = @assignments.for_employee(params[:for_employee]) if params[:for_employee].present?
+    @assignments = @assignments.for_pay_level(params[:for_pay_level]) if params[:for_pay_level].present?
+    @assignments = @assignments.for_role(params[:for_role]) if params[:for_role].present?
+    
   end
 
   # GET /assignments/1

@@ -5,6 +5,9 @@ class FlavorsController < ApplicationController
   # GET /flavors.json
   def index
     @flavors = Flavor.all
+    @flavors = @flavors.active(params[:active]) if params[:active].present?
+    @flavors = @flavors.inactive(params[:inactive]) if params[:inactive].present?
+    @flavors = @flavors.alphabetical(params[:alphabetical]) if params[:alphabetical].present?
   end
 
   # GET /flavors/1

@@ -18,8 +18,21 @@ class EmployeesController < ApplicationController
     else
       @employees = Employee.all
     end
+    @employees = @employees.active(params[:active]) if params[:active].present?
+    @employees = @employees.inactive(params[:inactive]) if params[:inactive].present?
+    @employees = @employees.younger_than_18(params[:younger_than_18]) if params[:younger_than_18].present?
+    @employees = @employees.is_18_or_older(params[:is_18_or_older]) if params[:is_18_or_older].present?
+    @employees = @employees.regulars(params[:regulars]) if params[:regulars].present?
+    @employees = @employees.managers(params[:managers]) if params[:managers].present?
+    @employees = @employees.admins(params[:admins]) if params[:admins].present?
+    @employees = @employees.alphabetical(params[:alphabetical]) if params[:alphabetical].present?
+    @employees = @employees.for_store(params[:for_store]) if params[:for_store].present?
   end
-
+  
+  def active
+    @active = Employee.active
+  end
+  
   # GET /employees/1
   # GET /employees/1.json
   def show
@@ -103,6 +116,7 @@ class EmployeesController < ApplicationController
       end
     end
   end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.

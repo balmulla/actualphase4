@@ -5,6 +5,56 @@
 <% if @role == "admin" %>
 <%= link_to 'New Assignment', new_assignment_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info" %>
 <% end %>
+<div class="dropdown">
+    <button class="dropbtn">filters</button>
+    <div class="dropdown-content">
+      <a href="<%= assignments_path(:current => true) %>">Current</a>
+      <a href="<%= assignments_path(:past => true) %>">Past</a>
+      <a href="<%= assignments_path(:by_store => true) %>">By store</a>
+      <a href="<%= assignments_path(:by_employee => true) %>">By employee</a>
+      <a href="<%= assignments_path(:chronological => true) %>">Chronological</a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">for store</button>
+    <div class="dropdown-content">
+      <% Store.all.each do |s| %>
+      <a href="<%= assignments_path(:for_store => s.id) %>"><%= s.id %></a>
+      <% end %>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">for employee</button>
+    <div class="dropdown-content">
+      <% Employee.all.each do |s| %>
+      <a href="<%= assignments_path(:for_employee => s.id) %>"><%= s.id %></a>
+      <% end %>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">for pay level</button>
+    <div class="dropdown-content">
+      <a href="<%= assignments_path(:for_pay_level => 1) %>"><%= 1 %></a>
+      <a href="<%= assignments_path(:for_pay_level => 2) %>"><%= 2 %></a>
+      <a href="<%= assignments_path(:for_pay_level => 3) %>"><%= 3 %></a>
+      <a href="<%= assignments_path(:for_pay_level => 4) %>"><%= 4 %></a>
+      <a href="<%= assignments_path(:for_pay_level => 5) %>"><%= 5 %></a>
+      <a href="<%= assignments_path(:for_pay_level => 6) %>"><%= 6 %></a>
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">for role</button>
+    <div class="dropdown-content">
+      <a href="<%= assignments_path(:for_role => "employee") %>"><%= "employee" %></a>
+      <a href="<%= assignments_path(:for_role => "admin") %>"><%= "admin" %></a>
+      <a href="<%= assignments_path(:for_role => "manager") %>"><%= "manager" %></a>
+    </div>
+  </div>
+  
 <table class="table table-striped">
   <thead>
     <tr>

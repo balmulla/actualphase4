@@ -10,6 +10,9 @@ class StoresController < ApplicationController
     else
       @stores = Store.active
     end
+    @stores = @stores.active(params[:active]) if params[:active].present?
+    @stores = @stores.inactive(params[:inactive]) if params[:inactive].present?
+    @stores = @stores.alphabetical(params[:alphabetical]) if params[:alphabetical].present?
   end
 
   # GET /stores/1

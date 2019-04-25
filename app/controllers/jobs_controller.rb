@@ -10,6 +10,9 @@ class JobsController < ApplicationController
   # GET /jobs.json
   def index
     @jobs = Job.all
+    @jobs = @jobs.active(params[:active]) if params[:active].present?
+    @jobs = @jobs.inactive(params[:inactive]) if params[:inactive].present?
+    @jobs = @jobs.alphabetical(params[:alphabetical]) if params[:alphabetical].present?
   end
 
   # GET /jobs/1

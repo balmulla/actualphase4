@@ -27,9 +27,9 @@ class FlavorTest < ActiveSupport::TestCase
       assert_equal 1, Flavor.inactive.count
     end
     
-    should "have a scope 'alphabetically' that works" do
-      assert_equal 3, Flavor.alphabetically.count
-      assert_equal [@chocolate,@strawberry, @vanilla], Flavor.alphabetically
+    should "have a scope 'alphabetical' that works" do
+      assert_equal 3, Flavor.alphabetical.count
+      assert_equal [@chocolate,@strawberry, @vanilla], Flavor.alphabetical
     end
   end
     

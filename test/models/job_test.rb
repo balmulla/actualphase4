@@ -37,8 +37,8 @@ class JobTest < ActiveSupport::TestCase
     end
     
     should "have a scope 'alphabetically' that works" do
-      assert_equal 3, Job.alphabetically.count
-      assert_equal [@clean,@serve, @wash], Job.alphabetically
+      assert_equal 3, Job.alphabetical.count
+      assert_equal [@clean,@serve, @wash], Job.alphabetical
     end
     
   end
