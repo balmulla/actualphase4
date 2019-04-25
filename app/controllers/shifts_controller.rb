@@ -4,6 +4,8 @@ class ShiftsController < ApplicationController
   #before show, destroy, update, edit, create
   before_action :only_admin_and_manager, only: [:edit, :update, :create, :new]
   before_action :for_destroy, only: [:destroy]
+  before_action :for_show, only: [:show]
+  
   
   # GET /shifts
   # GET /shifts.json
@@ -119,6 +121,17 @@ class ShiftsController < ApplicationController
     def for_destroy
       @role = current_user_role
       unless @role == "admin" || (@role == "manager" && current_user.employee.current_assignment && @shift.assignment && current_user.employee.current_assignment.store_id == @shift.assignment.store_id )
+        # redirect_to(root_url) 
+        respond_to do |format|
+          format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+          format.json { head :no_content }
+        end
+      end
+    end
+    
+    def for_show
+      @role = current_user_role
+      unless @role == "admin" || (@role == "employee" && @shift.employee == current_user.employee) ||(@role == "manager" && current_user.employee.current_assignment && @shift.assignment && current_user.employee.current_assignment.store_id == @shift.assignment.store_id )
         # redirect_to(root_url) 
         respond_to do |format|
           format.html { redirect_to root_url, notice: 'You are not authorised to do that' }

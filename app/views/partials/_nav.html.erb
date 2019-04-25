@@ -40,7 +40,9 @@
     <button class="dropbtn">Shifts</button>
     <div class="dropdown-content">
       <a href="<%= shifts_path%>">List Shifts</a>
+      <% if @role == "admin" ||  @role == "manager" %>
       <a href="<%=new_shift_path%>">New Shift</a>
+      <% end %>
     </div>
   </div>
   
