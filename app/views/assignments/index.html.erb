@@ -40,7 +40,9 @@
     <% end %>
   </tbody>
 </table>
-
+<% if @assignments.length == 0 %>
+  <p> No assignments created yet!</p>
+<% end %>
 <br>
 
 

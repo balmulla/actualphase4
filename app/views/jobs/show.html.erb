@@ -17,8 +17,10 @@
   <strong>Active:</strong>
   <%= @job.active %>
 </p>
-
+<% @role = current_user_role %>
+<% if @role == "admin" %>
 <%= link_to 'Edit', edit_job_path(@job), :class => "btn btn-info"  %> 
+<% end %>
 <%= link_to 'Back', jobs_path, :class => "btn btn-info"  %>
 
 </div>

@@ -1,5 +1,10 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
+  #admins can do everything
+  before_action :logged_in_user
+  before_action :only_admin, only: [:edit, :update, :destroy, :create, :new]
+  #managers and employees can only read jobs
+  
 
   # GET /jobs
   # GET /jobs.json
@@ -82,5 +87,23 @@ class JobsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
       params.require(:job).permit(:name, :description, :active)
+    end
+    
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+    
+    def only_admin
+      @role = current_user_role
+      unless @role == "admin"
+        # redirect_to(root_url) 
+        respond_to do |format|
+          format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+          format.json { head :no_content }
+        end
+      end
     end
 end

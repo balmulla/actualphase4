@@ -50,7 +50,9 @@
     <button class="dropbtn">Jobs</button>
     <div class="dropdown-content">
       <a href="<%= jobs_path%>">List Jobs</a>
+      <% if @role == "admin" %>
       <a href="<%=new_job_path%>">New Job</a>
+      <% end %>
     </div>
   </div>
   

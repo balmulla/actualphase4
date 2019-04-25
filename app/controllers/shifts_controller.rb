@@ -2,8 +2,8 @@ class ShiftsController < ApplicationController
   before_action :set_shift, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user
   #before show, destroy, update, edit, create
-  before_action :only_admin_and_manager, only: [:edit, :update, :create, :new]
-  before_action :for_destroy, only: [:destroy]
+  before_action :only_admin_and_manager, only: [:create, :new]
+  before_action :for_destroy_and_update, only: [:destroy, :update, :edit]
   before_action :for_show, only: [:show]
   
   
@@ -118,7 +118,7 @@ class ShiftsController < ApplicationController
       end
     end
     
-    def for_destroy
+    def for_destroy_and_update
       @role = current_user_role
       unless @role == "admin" || (@role == "manager" && current_user.employee.current_assignment && @shift.assignment && current_user.employee.current_assignment.store_id == @shift.assignment.store_id )
         # redirect_to(root_url) 
