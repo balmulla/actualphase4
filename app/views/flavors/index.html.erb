@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Flavors</h1>
+<% @role = current_user_role %>
+<% if @role == "admin" %>
 <%= link_to 'New Flavor', new_flavor_path , :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info"%>
+<%end%>
 <div class="dropdown">
     <button class="dropbtn">filters</button>
     <div class="dropdown-content">
@@ -27,8 +30,10 @@
         <td><%= flavor.name %></td>
         <td><%= flavor.active %></td>
         <td><%= link_to 'Show', flavor %></td>
+        <% if @role == "admin" %>
         <td><%= link_to 'Edit', edit_flavor_path(flavor) %></td>
         <td><%= link_to 'Destroy', flavor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>

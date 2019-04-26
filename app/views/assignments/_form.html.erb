@@ -15,14 +15,18 @@
   <tr>
   <div class="field ">
     <%= form.label :store_id, "Store ID", :style => "position:relative;" %>
-    <%= form.text_field :store_id, id: :assignment_store_id, :style => "position:relative;" %>
+    <!--<%= form.text_field :store_id, id: :assignment_store_id, :style => "position:relative;" %>-->
+    <% @stores=Store.all %>
+    <%= form.collection_select(:store_id, @stores, :id, :id) %>
   </div>
   </tr>
   
   <tr>
   <div class="field">
     <%= form.label :employee_id, "Employee ID",  :style => "position:relative;"  %>
-    <%= form.text_field :employee_id, id: :assignment_employee_id, :style => "position:relative; " %>
+    <!--<%= form.text_field :employee_id, id: :assignment_employee_id, :style => "position:relative; " %>-->
+    <% @employees=Employee.all %>
+    <%= form.collection_select(:employee_id, @employees, :id, :id) %>
   </div>
   </tr>
   

@@ -3,11 +3,12 @@ class EmployeesController < ApplicationController
   skip_before_action :verify_authenticity_token, :only => [:index, :show]
   before_action :logged_in_user
   #edit, update, destroy, create admin only
-  before_action :only_admin, only: [:edit, :update, :destroy, :create, :new]
+  before_action :only_admin, only: [:destroy, :create, :new]
   #show, employee, admin, manager
   before_action :for_show, only: [:show]
   #index, manager, admin
   before_action :for_index, only: [:index]
+  before_action :for_edit, only: [:edit, :update]
 
   # GET /employees
   # GET /employees.json
@@ -169,6 +170,16 @@ class EmployeesController < ApplicationController
     def for_index
       @role = current_user_role
       unless @role == "admin" || @role == "manager"
+        # redirect_to(root_url) 
+        respond_to do |format|
+          format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+          format.json { head :no_content }
+        end
+      end
+    end
+    def for_edit
+      @role = current_user_role
+      unless @role == "admin" || @employee == current_user.employee
         # redirect_to(root_url) 
         respond_to do |format|
           format.html { redirect_to root_url, notice: 'You are not authorised to do that' }

@@ -2,10 +2,12 @@ class ShiftjobsController < ApplicationController
   before_action :set_shiftjob, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user
   #admin can do all
-  before_action :only_admin, only: [:destroy]  
+  # before_action :for_destroy, only: [:destroy]  
   #managers can create destroy shifts associated to their store only
-  # before_action :for_create, only: [:new, :create]  
-  before_action :for_update, only: [:edit, :update] 
+  before_action :for_create, only: [:new, :create] 
+  before_action :only_admin, only: [:edit, :update]
+  before_action :for_manager_and_admin, only: [:destroy] 
+  before_action :for_show, only: [:show]
   
   #forshow
 
@@ -16,16 +18,24 @@ class ShiftjobsController < ApplicationController
   # GET /shiftjobs.json
   def index
     @role = current_user_role
-    if @role == "admin"
-      @shiftjobs = Shiftjob.all
-    end
+    @shiftjobs = Shiftjob.all
     if @role == "manager"
-      @shiftjobs = Shiftjob.all
+      @tempshiftjobs = []
       @shiftjobs.each do |s|
-        if s.shift.assignment.employee.role != "employee" || s.shift.assignment.store_id != current_user.employee.current_assignment.store_id
-          @shiftjobs.delete(s)
+        if s.shift.assignment.employee.role == "employee" && s.shift.assignment.store_id == current_user.employee.current_assignment.store_id
+          @tempshiftjobs.append(s)
         end
       end
+      @shiftjobs=@tempshiftjobs
+    end
+    if @role == "employee"
+      @tempshiftjobs = []
+      @shiftjobs.each do |s|
+        if s.shift.assignment && s.shift.assignment.employee_id == current_user.employee.id
+          @tempshiftjobs.append(s)
+        end
+      end
+      @shiftjobs=@tempshiftjobs
     end
   end
 
@@ -101,9 +111,40 @@ class ShiftjobsController < ApplicationController
       end
     end
     
+    # def for_create
+    #   @role = current_user_role
+    #   unless @role == "admin" || (@role == "manager" && @shiftjob.shift && @shiftjob.shift.assignment && current_user.employee.assignment && @shiftjob.shift.assignment.store_id == current_user.employee.assignment.store_id )
+    #     # redirect_to(root_url) 
+    #     respond_to do |format|
+    #       format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+    #       format.json { head :no_content }
+    #     end
+    #   end
+    # end
+
+    def for_create
+      @role = current_user_role
+      unless @role == "admin" || @role == "manager"
+        respond_to do |format|
+          format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+          format.json { head :no_content }
+        end
+      end
+    end
+    
     def only_admin
       @role = current_user_role
       unless @role == "admin"
+        respond_to do |format|
+          format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+          format.json { head :no_content }
+        end
+      end
+    end 
+
+    def for_manager_and_admin
+      @role = current_user_role
+      unless @role == "admin" || (@role == "manager" && current_user.employee.current_assignment && @shiftjob.shift && @shiftjob.shift.assignment && @shiftjob.shift.assignment.store_id && @shiftjob.shift.assignment.store_id == current_user.employee.current_assignment.store_id)
         # redirect_to(root_url) 
         respond_to do |format|
           format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
@@ -111,10 +152,10 @@ class ShiftjobsController < ApplicationController
         end
       end
     end
-
-    def for_update
+    
+    def for_show
       @role = current_user_role
-      unless @role == "admin" || (@role == "manager" && current_user.employee.current_assignment && @shiftjob.shift && @shiftjob.shift && @shiftjob.shift.assignment && @shiftjob.shift.assignment.store_id && @shiftjob.shift.assignment.store_id == current_user.employee.current_assignment.store_id)
+      unless @role == "admin" || (@role == "employee" && @shiftjob.shift && @shiftjob.shift.assignment && @shiftjob.shift.assignment.employee == current_user.employee)|| (@role == "manager" && current_user.employee.current_assignment && @shiftjob.shift && @shiftjob.shift.assignment && @shiftjob.shift.assignment.store_id && @shiftjob.shift.assignment.store_id == current_user.employee.current_assignment.store_id)
         # redirect_to(root_url) 
         respond_to do |format|
           format.html { redirect_to root_url, notice: 'You are not authorised to do that' }

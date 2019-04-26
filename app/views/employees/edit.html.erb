@@ -1,7 +1,10 @@
 <br>
 <h1 style = "position:absolute; TOP:23px; LEFT:184px; ">Editing Employee</h1>
 <%= link_to 'Show', @employee, :style => "position:absolute; TOP:30px; LEFT:680px; ", :class => "btn btn-info"  %> 
+<% @role = current_user_role%>
+<% unless @role == "employee" %>
 <%= link_to 'Back', employees_path, :style => "position:absolute; TOP:30px; LEFT:600px; ", :class => "btn btn-info"  %>
+<%end%>
 <%= render 'form', employee: @employee %>
 
 

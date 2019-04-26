@@ -1,5 +1,8 @@
 class FlavorsController < ApplicationController
   before_action :set_flavor, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user
+  before_action :only_admin, only: [:edit, :update, :create, :new, :destroy]
+  before_action :only_admin_and_manager, only: [:index, :show]
 
   # GET /flavors
   # GET /flavors.json
@@ -75,4 +78,31 @@ class FlavorsController < ApplicationController
     def flavor_params
       params.require(:flavor).permit(:name, :active)
     end
+    
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+    
+    def only_admin
+      @role = current_user_role
+      unless @role == "admin"
+        respond_to do |format|
+          format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+          format.json { head :no_content }
+        end
+      end
+    end 
+    
+    def only_admin_and_manager
+      @role = current_user_role
+      unless @role == "admin" || @role == "manager"
+        respond_to do |format|
+          format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
+          format.json { head :no_content }
+        end
+      end
+    end 
 end

@@ -13,21 +13,40 @@
     </div>
   <% end %>
 
+<% 
+  @flavors=Flavor.all
+  @role = current_user_role
+  @stores = Store.all
+  if @role == "manager"
+    @tempstores = []
+    @stores.each do |s|
+      if s.id == current_user.employee.current_assignment.store_id
+        @tempstores.append(s)
+      end
+    end
+    @stores=@tempstores
+  end
+
+%> 
+
 <div class="col-md-6">
   <div class="field">
     <%= form.label :store_id %>
-    <%= form.number_field :store_id %>
+    <!--<%= form.number_field :store_id %>-->
+     <%= form.collection_select(:store_id, @stores, :id, :id) %>
   </div>
 
   <div class="field">
     <%= form.label :flavor_id %>
-    <%= form.number_field :flavor_id %>
+    <!--<%= form.number_field :flavor_id %>-->
+    <%= form.collection_select(:flavor_id, @flavors, :id, :name) %>
   </div>
 
   <div class="actions">
     <%= form.submit "save", :class => 'btn btn-secondary'%>
   </div>
-<% end %>
 <br>
 <br>
+
 </div>
+<% end %>

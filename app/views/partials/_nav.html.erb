@@ -11,6 +11,7 @@
       <% if @role == "admin" %>
         <a href="<%=new_employee_path%>">New Employee</a>
       <% end %>
+      <a href="<%=employees_url+"/"+current_user.employee.id.to_s%>">Profile</a>
     </div>
   </div>
   
@@ -67,7 +68,9 @@
     <button class="dropbtn">Flavors</button>
     <div class="dropdown-content">
       <a href="<%= flavors_path%>">List Flavors</a>
-      <a href="<%=new_flavor_path%>">New Flavor Job</a>
+      <% if @role == "admin" %>
+      <a href="<%=new_flavor_path%>">New Flavor</a>
+      <% end %>
     </div>
   </div>
   

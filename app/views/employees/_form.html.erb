@@ -30,11 +30,13 @@
   </div>
 
   
-
+<% @role = current_user_role
+  if @role == "admin" %>
   <div class="field">
     <%= form.label :ssn, :style => "position:relative;"  %> 
     <%= form.text_field :ssn, id: :employee_ssn, :style => "position:relative; " %>
   </div>  
+  <%end%>
 
   
 
@@ -53,12 +55,19 @@
   </div>
 
     
-
+<% @roles = [["admin", "admin"], ["manager", "manager"], ["employee", "employee"]]%>
   <div class="field ">
     <%= form.label :role, :style => "position:relative;"  %>
-    <%= form.text_field :role, id: :employee_role, :style => "position:relative; " %>
+    <!--<%= form.text_field :role, id: :employee_role, :style => "position:relative; " %>-->
+    <%= form.select :role, @roles %>
+    
   </div>
+<!---->
 
+<!--<select name="to_vote" id="to_vote">-->
+<!--  <option value="1">eligible</option>-->
+<!--  <option value="0">ineligible</option>-->
+<!--</select>-->
   
 
   <div class="field ">

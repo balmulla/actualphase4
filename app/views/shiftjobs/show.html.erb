@@ -9,8 +9,13 @@
 </p>
 
 <p>
-  <strong>Job:</strong>
+  <strong>Job id:</strong>
   <%= @shiftjob.job_id %>
+</p>
+
+<p>
+  <strong>Job name:</strong>
+  <%= @shiftjob.job.name %>
 </p>
 
 <%= link_to 'Edit', edit_shiftjob_path(@shiftjob), :class => "btn btn-info"  %> 
