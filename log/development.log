@@ -41537,3 +41537,795 @@ Processing by ShiftsController#index as HTML
 Completed 200 OK in 135ms (Views: 127.8ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/demos/destroy" for 78.100.201.225 at 2019-04-26 09:19:21 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by DemosController#destroy as HTML
+Redirected to https://first-test-bmulla.c9users.io/
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:19:22 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.5ms)
+  Rendered home/home.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 397ms (Views: 394.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/demos/destroy" for 78.100.201.225 at 2019-04-26 09:19:23 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#destroy as HTML
+Redirected to https://first-test-bmulla.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:19:23 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/demos/new" for 78.100.201.225 at 2019-04-26 09:19:27 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#new as HTML
+  Rendering demos/new.html.erb within layouts/application
+  Rendered demos/new.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/demos" for 78.100.201.225 at 2019-04-26 09:19:34 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"92RWYBYiAj75gratNVP7b9N7Ry1YQ/3xi+9LtciWZTQzuhULBBPh/lFku2k34xh4cj53nJ/LROmKNH0OEgvt1w==", "demo"=>{"email"=>"employee@e.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "employee@e.com"], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:6
+Redirected to https://first-test-bmulla.c9users.io/employees
+Completed 302 Found in 77ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-26 09:19:35 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+Redirected to https://first-test-bmulla.c9users.io/
+Filter chain halted as :for_index rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:19:35 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.5ms)
+  Rendered home/home.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav.html.erb (1.4ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/demos/destroy" for 78.100.201.225 at 2019-04-26 09:21:21 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#destroy as HTML
+Redirected to https://first-test-bmulla.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:21:22 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.3ms)
+  Rendered home/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/demos/new" for 78.100.201.225 at 2019-04-26 09:21:24 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#new as HTML
+  Rendering demos/new.html.erb within layouts/application
+  Rendered demos/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/demos" for 78.100.201.225 at 2019-04-26 09:21:32 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/kHwtcgrEQtLOJuWUyGqkNYeq3hZu+Nqz9SXkQHlZ0A6n7Pe2hryy+PellJRkUmHd1ubyZ4zWnLOD6Eq23jvow==", "demo"=>{"email"=>"employee@e.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "employee@e.com"], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:6
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:9
+Redirected to https://first-test-bmulla.c9users.io/employees?id=20
+Completed 302 Found in 107ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/employees?id=20" for 78.100.201.225 at 2019-04-26 09:21:33 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+Redirected to https://first-test-bmulla.c9users.io/
+Filter chain halted as :for_index rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:21:34 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav.html.erb (2.4ms)
+Completed 200 OK in 73ms (Views: 71.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/demos/destroy" for 78.100.201.225 at 2019-04-26 09:22:39 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#destroy as HTML
+Redirected to https://first-test-bmulla.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:22:40 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (1.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/demos/new" for 78.100.201.225 at 2019-04-26 09:22:43 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#new as HTML
+  Rendering demos/new.html.erb within layouts/application
+  Rendered demos/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/demos/destroy" for 78.100.201.225 at 2019-04-26 09:22:50 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#destroy as HTML
+Redirected to https://first-test-bmulla.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:22:51 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.5ms)
+  Rendered home/home.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/demos/new" for 78.100.201.225 at 2019-04-26 09:22:54 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#new as HTML
+  Rendering demos/new.html.erb within layouts/application
+  Rendered demos/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/demos" for 78.100.201.225 at 2019-04-26 09:23:04 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1HiA1NmU7dM4V9jjZ6eh+25jDZxjfzNoD9ugVwvxVSUZR0Q9dEagml01TXrLXBTuwWFezJ6YGpxwVEfXjnpN/Q==", "demo"=>{"email"=>"admin@a.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:6
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:9
+Redirected to https://first-test-bmulla.c9users.io/employees.19
+Completed 302 Found in 109ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/employees.19" for 78.100.201.225 at 2019-04-26 09:23:05 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as 
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/employees/index.html.erb:31
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:57
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 13], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 19], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 20], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 21], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 23], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  Rendered employees/index.html.erb within layouts/application (33.0ms)
+  Rendered partials/_nav.html.erb (1.4ms)
+Completed 200 OK in 218ms (Views: 202.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/employees/20" for 78.100.201.225 at 2019-04-26 09:23:35 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:124
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 20], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:43
+  Rendered employees/show.html.erb within layouts/application (2.7ms)
+  Rendered partials/_nav.html.erb (1.7ms)
+Completed 200 OK in 47ms (Views: 41.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees/21" for 78.100.201.225 at 2019-04-26 09:23:36 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:124
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 21], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:43
+  Rendered employees/show.html.erb within layouts/application (2.8ms)
+  Rendered partials/_nav.html.erb (1.4ms)
+Completed 200 OK in 45ms (Views: 39.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees/19" for 78.100.201.225 at 2019-04-26 09:23:36 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:124
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 19], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:43
+  Rendered employees/show.html.erb within layouts/application (2.4ms)
+  Rendered partials/_nav.html.erb (1.3ms)
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/employees" for 78.100.201.225 at 2019-04-26 09:23:36 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/employees/index.html.erb:31
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:57
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 13], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 19], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 20], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 21], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 23], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  Rendered employees/index.html.erb within layouts/application (57.6ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 96ms (Views: 90.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/demos/destroy" for 78.100.201.225 at 2019-04-26 09:24:00 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#destroy as HTML
+Redirected to https://first-test-bmulla.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:24:01 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.5ms)
+  Rendered home/home.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/demos/new" for 78.100.201.225 at 2019-04-26 09:24:03 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#new as HTML
+  Rendering demos/new.html.erb within layouts/application
+  Rendered demos/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/demos" for 78.100.201.225 at 2019-04-26 09:24:13 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vsXM8TvogxKnqo9pxKIj93M7ZtVyu9sYeIIWScz3KAJz+ggYljrOW8LIGvBoWZbi3Dk1hY9c8uwHDfHJSXww2g==", "demo"=>{"email"=>"admin@a.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:6
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:9
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 1.9ms)
+
+
+  
+NoMethodError (undefined method `/' for "/employees":String):
+  
+app/controllers/demos_controller.rb:9:in `create'
+Started GET "/demos/new" for 78.100.201.225 at 2019-04-26 09:24:47 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#new as HTML
+  Rendering demos/new.html.erb within layouts/application
+  Rendered demos/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/demos" for 78.100.201.225 at 2019-04-26 09:24:57 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hmN+/yKdaU/yJ49uhyhkTp8YvojIhe9NwS86op5HnYhLXLoWj08kBpdFGvcr09FbMBrt2DVixrm+oN0iG8yFUA==", "demo"=>{"email"=>"admin@a.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:6
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:9
+Redirected to https://first-test-bmulla.c9users.io/employees?id=19
+Completed 302 Found in 95ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/employees?id=19" for 78.100.201.225 at 2019-04-26 09:24:58 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/employees/index.html.erb:31
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:57
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 13], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 19], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 20], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 21], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 23], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  Rendered employees/index.html.erb within layouts/application (97.2ms)
+  Rendered partials/_nav.html.erb (1.5ms)
+Completed 200 OK in 143ms (Views: 135.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/demos/destroy" for 78.100.201.225 at 2019-04-26 09:26:50 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#destroy as HTML
+Redirected to https://first-test-bmulla.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:26:51 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.4ms)
+  Rendered home/home.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/demos/new" for 78.100.201.225 at 2019-04-26 09:26:54 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#new as HTML
+  Rendering demos/new.html.erb within layouts/application
+  Rendered demos/new.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (1.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/demos" for 78.100.201.225 at 2019-04-26 09:27:01 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IGm/GD+wcxlwuqDD9fMvfy64gXVsNdbK6r2bchd5GN/tVnvxkmI+UBXYNVpZCJpqgbrSJZHS/z6VMnzykvIABw==", "demo"=>{"email"=>"admin@a.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:6
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:9
+Redirected to https://first-test-bmulla.c9users.io/employees.19
+Completed 302 Found in 95ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/employees.19" for 78.100.201.225 at 2019-04-26 09:27:02 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/employees/index.html.erb:31
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:57
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 13], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 15], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 16], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 19], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 20], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 21], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 23], ["LIMIT", 1]]
+  ↳ app/views/employees/index.html.erb:67
+  Rendered employees/index.html.erb within layouts/application (44.4ms)
+  Rendered partials/_nav.html.erb (1.5ms)
+Completed 200 OK in 117ms (Views: 99.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/demos/destroy" for 78.100.201.225 at 2019-04-26 09:29:30 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#destroy as HTML
+Redirected to https://first-test-bmulla.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:29:32 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.5ms)
+  Rendered home/home.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (1.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 58ms (Views: 55.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/demos/new" for 78.100.201.225 at 2019-04-26 09:29:34 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#new as HTML
+  Rendering demos/new.html.erb within layouts/application
+  Rendered demos/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/demos" for 78.100.201.225 at 2019-04-26 09:29:43 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LxzGdfUCVc1y6uvZFRdA6H9wtv6CIsJM2kTC38+2gSriIwKcWNAYhBeIfkC57PX90HLlrn/F67ilyyVfSj2Z8g==", "demo"=>{"email"=>"admin@a.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:6
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:9
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 2.4ms)
+
+
+  
+TypeError (no implicit conversion of Integer into String):
+  
+app/controllers/demos_controller.rb:9:in `+'
+app/controllers/demos_controller.rb:9:in `create'
+Started GET "/demos/new" for 78.100.201.225 at 2019-04-26 09:30:52 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#new as HTML
+  Rendering demos/new.html.erb within layouts/application
+  Rendered demos/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/demos" for 78.100.201.225 at 2019-04-26 09:31:01 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEj/6e7UETPRDJQkw+RvreKEFhVYT96lBslOH4hgPJN1dzsAQwZcerRuAb1vH9q4TYZFRaWo91F5RqmfDeskSw==", "demo"=>{"email"=>"admin@a.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:6
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:9
+Redirected to https://first-test-bmulla.c9users.io/employees/19
+Completed 302 Found in 96ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/employees/19" for 78.100.201.225 at 2019-04-26 09:31:02 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:124
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 19], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:43
+  Rendered employees/show.html.erb within layouts/application (3.7ms)
+  Rendered partials/_nav.html.erb (3.2ms)
+Completed 200 OK in 55ms (Views: 48.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/demos/destroy" for 78.100.201.225 at 2019-04-26 09:33:29 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#destroy as HTML
+Redirected to https://first-test-bmulla.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:33:30 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.5ms)
+  Rendered home/home.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/demos/new" for 78.100.201.225 at 2019-04-26 09:33:33 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#new as HTML
+  Rendering demos/new.html.erb within layouts/application
+  Rendered demos/new.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/demos" for 78.100.201.225 at 2019-04-26 09:33:40 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IoU9nPSR/rv8dyGbWqFMHf/4V+XFYLitiWs+66KNJq3vuvl1WUOz8pkVtAL2WvkIUPoEtTiHkVn25NlrJwY+dQ==", "demo"=>{"email"=>"admin@a.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:6
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:11
+Redirected to https://first-test-bmulla.c9users.io/employees/19
+Completed 302 Found in 96ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/employees/19" for 78.100.201.225 at 2019-04-26 09:33:41 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:124
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 19], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:44
+  Rendered employees/show.html.erb within layouts/application (3.8ms)
+  Rendered partials/_nav.html.erb (1.6ms)
+Completed 200 OK in 50ms (Views: 43.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/demos" for 78.100.201.225 at 2019-04-26 09:34:27 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bTslKU+hN6uy5Z80W2sjlOeGAPSj9o/HbW5rAMvLy0Gp5WZCXZDUaxoDkvBZ28CDRsMwRWR+Nt9stV27EVZDog==", "demo"=>{"email"=>"employee@e.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "employee@e.com"], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:6
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:11
+Redirected to https://first-test-bmulla.c9users.io/employees/20
+Completed 302 Found in 75ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/employees/20" for 78.100.201.225 at 2019-04-26 09:34:28 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:124
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 20], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:44
+  Rendered employees/show.html.erb within layouts/application (3.1ms)
+  Rendered partials/_nav.html.erb (1.5ms)
+Completed 200 OK in 61ms (Views: 56.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/demos/destroy" for 78.100.201.225 at 2019-04-26 09:35:12 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#destroy as HTML
+Redirected to https://first-test-bmulla.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 78.100.201.225 at 2019-04-26 09:35:13 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/_general_home.html.erb (0.6ms)
+  Rendered home/home.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (1.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/demos/new" for 78.100.201.225 at 2019-04-26 09:35:15 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#new as HTML
+  Rendering demos/new.html.erb within layouts/application
+  Rendered demos/new.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  Rendered partials/_nav2.html.erb (0.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/demos" for 78.100.201.225 at 2019-04-26 09:35:28 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DemosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QRq5C6yeTFxZ+BLOxpjRYxGPl90JsW+rYNglsb4zpC2FxPpgvq+vnPEeHwrEKDJ0sMqnbM451rNhAxMKZK4szg==", "demo"=>{"email"=>"employee@e.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "employee@e.com"], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:6
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/demos_controller.rb:11
+Redirected to https://first-test-bmulla.c9users.io/employees/20
+Completed 302 Found in 107ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/employees/20" for 78.100.201.225 at 2019-04-26 09:35:29 +0000
+Cannot render console from 78.100.201.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:124
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:7
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/helpers/demos_helper.rb:12
+  Rendering employees/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."employee_id" = ? LIMIT ?[0m  [["employee_id", 20], ["LIMIT", 1]]
+  ↳ app/views/employees/show.html.erb:44
+  Rendered employees/show.html.erb within layouts/application (4.2ms)
+  Rendered partials/_nav.html.erb (1.7ms)
+Completed 200 OK in 53ms (Views: 45.6ms | ActiveRecord: 1.1ms)
+
+
