@@ -45,9 +45,11 @@
   </tr>
   
   <tr>
+  <% @paylevels = [[1,1], [2,2], [3,3], [4,4], [5,5], [6,6]]%>
   <div class="field ">
     <%= form.label :pay_level, :style => "position:relative;"  %> 
-    <%= form.text_field :pay_level, id: :assignment_pay_level, :style => "position:relative; " %>
+    <!--<%= form.text_field :pay_level, id: :assignment_pay_level, :style => "position:relative; " %>-->
+    <%= form.select :pay_level, @paylevels %>
   </div>
   </tr>
     
