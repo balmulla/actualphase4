@@ -2,10 +2,12 @@ class ShiftjobsController < ApplicationController
   before_action :set_shiftjob, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user
   #admin can do all
-  before_action :only_admin, only: [:destroy, :index, :show]  
+  before_action :only_admin, only: [:destroy]  
   #managers can create destroy shifts associated to their store only
   # before_action :for_create, only: [:new, :create]  
-  before_action :for_update, only: [:edit, :update]  
+  before_action :for_update, only: [:edit, :update] 
+  
+  #forshow
 
 
 
@@ -13,7 +15,18 @@ class ShiftjobsController < ApplicationController
   # GET /shiftjobs
   # GET /shiftjobs.json
   def index
-    @shiftjobs = Shiftjob.all
+    @role = current_user_role
+    if @role == "admin"
+      @shiftjobs = Shiftjob.all
+    end
+    if @role == "manager"
+      @shiftjobs = Shiftjob.all
+      @shiftjobs.each do |s|
+        if s.shift.assignment.employee.role != "employee" || s.shift.assignment.store_id != current_user.employee.current_assignment.store_id
+          @shiftjobs.delete(s)
+        end
+      end
+    end
   end
 
   # GET /shiftjobs/1

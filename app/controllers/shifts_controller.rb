@@ -13,6 +13,11 @@ class ShiftsController < ApplicationController
     @role = current_user_role
     if @role == "manager" && current_user.employee.current_assignment
       @shifts = Shift.for_store(current_user.employee.current_assignment.store_id)
+      @shifts.each do |s|
+        if s.assignment.employee.role != "employee"
+          @shifts.delete(s)
+        end
+      end
     end
     if @role == "employee" && current_user.employee.current_assignment
       @shifts = Shift.for_employee(current_user.employee)
@@ -129,7 +134,7 @@ class ShiftsController < ApplicationController
     
     def for_destroy_and_update
       @role = current_user_role
-      unless @role == "admin" || (@role == "manager" && current_user.employee.current_assignment && @shift.assignment && current_user.employee.current_assignment.store_id == @shift.assignment.store_id )
+      unless @role == "admin" || (@role == "manager" && @shift.assignment.employee.role == "employee" && current_user.employee.current_assignment && @shift.assignment && current_user.employee.current_assignment.store_id == @shift.assignment.store_id )
         # redirect_to(root_url) 
         respond_to do |format|
           format.html { redirect_to root_url, notice: 'You are not authorised to do that' }
@@ -140,7 +145,7 @@ class ShiftsController < ApplicationController
     
     def for_show
       @role = current_user_role
-      unless @role == "admin" || (@role == "employee" && @shift.employee == current_user.employee) ||(@role == "manager" && current_user.employee.current_assignment && @shift.assignment && current_user.employee.current_assignment.store_id == @shift.assignment.store_id )
+      unless @role == "admin" || (@role == "employee" && @shift.employee == current_user.employee) ||(@role == "manager" && @shift.assignment.employee.role == "employee" && current_user.employee.current_assignment && @shift.assignment && current_user.employee.current_assignment.store_id == @shift.assignment.store_id )
         # redirect_to(root_url) 
         respond_to do |format|
           format.html { redirect_to root_url, notice: 'You are not authorised to do that' }

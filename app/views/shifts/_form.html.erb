@@ -15,7 +15,7 @@
 <%
     @role = current_user_role 
     if @role == "manager"
-       @assignments=Assignment.for_store(current_user.employee.current_assignment.store_id)
+       @assignments=Assignment.for_store(current_user.employee.current_assignment.store_id).for_role("employee")
      end
     if @role == "admin"
       @assignments=Assignment.all

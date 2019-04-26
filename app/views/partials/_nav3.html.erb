@@ -1,0 +1,11 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
+  <ul class="navbar-nav">
+  <a class="dropbtn hm" href="<%= home_path%>">Home</a>
+  <a class="dropbtn hm" href="<%=employees_url+"/"+current_user.employee.id.to_s%>">Profile</a>
+  <a class="dropbtn hm" href="<%= stores_path%>">Stores</a>
+  <a class="dropbtn hm" href="<%= assignments_path%>">Assignments</a>
+  <a class="dropbtn hm" href="<%= shifts_path%>">Shifts</a>
+  <a class="dropbtn hm" href="<%= shiftjobs_path%>">Shift jobs</a>
+  </ul>
+</nav>

@@ -6,7 +6,6 @@ JSON.parse({ a: { b: 'c' } }.to_json, object_class: OpenStruct)
 
 
 <p id="notice"><%= notice %></p>
-
 <h1>Employees</h1>
 <% @role = current_user_role %>
 <% if @role == "admin" %>
@@ -19,12 +18,15 @@ JSON.parse({ a: { b: 'c' } }.to_json, object_class: OpenStruct)
       <a href="<%= employees_path(:inactive => true) %>">Inactive</a>
       <a href="<%= employees_path(:younger_than_18 => true) %>">Younger than 18</a>
       <a href="<%= employees_path(:is_18_or_older => true) %>">18 or older</a>
-      <a href="<%= employees_path(:regulars => true) %>">Regulars</a>
-      <a href="<%= employees_path(:managers => true) %>">Managers</a>
-      <a href="<%= employees_path(:admins => true) %>">Admins</a>
+      <% unless @role == "manager" %>
+        <a href="<%= employees_path(:regulars => true) %>">Regulars</a>
+        <a href="<%= employees_path(:managers => true) %>">Managers</a>
+        <a href="<%= employees_path(:admins => true) %>">Admins</a>
+      <%end%>
       <a href="<%= employees_path(:alphabetical => true) %>">Alphabetical</a>
     </div>
   </div>
+<% unless @role == "manager" %>
   <div class="dropdown">
     <button class="dropbtn">for store</button>
     <div class="dropdown-content">
@@ -33,6 +35,7 @@ JSON.parse({ a: { b: 'c' } }.to_json, object_class: OpenStruct)
       <% end %>
     </div>
   </div>
+<%end%>
 <table class="table table-striped" style="font-size:60%;">
   <thead>
     <tr>
@@ -79,4 +82,12 @@ JSON.parse({ a: { b: 'c' } }.to_json, object_class: OpenStruct)
 <% if @employees.length == 0 %>
   <p> No employee created yet!</p>
 <% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>

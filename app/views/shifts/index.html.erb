@@ -1,17 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Shifts</h1>
+<% @role = current_user_role %>
+<% if @role == "admin" || @role == "manager"%>
 <%= link_to 'New Shift', new_shift_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info"%>
+<% end %>
+
 <div class="dropdown">
     <button class="dropbtn">filters</button>
     <div class="dropdown-content">
       <a href="<%= shifts_path(:upcoming => true) %>">Upcoming</a>
       <a href="<%= shifts_path(:past => true) %>">Past</a>
+      <% unless @role == "employee" %>
       <a href="<%= shifts_path(:by_store => true) %>">By store</a>
       <a href="<%= shifts_path(:by_employee => true) %>">By employee</a>
+      <% end %>
       <a href="<%= shifts_path(:chronological => true) %>">Chronological</a>
     </div>
   </div>
+  <% unless @role == "employee" %>
   <div class="dropdown">
     <button class="dropbtn">for store</button>
     <div class="dropdown-content">
@@ -29,7 +36,7 @@
       <% end %>
     </div>
   </div>
-  
+  <% end %>
   <div class="dropdown">
     <button class="dropbtn">for next x days</button>
     <div class="dropdown-content">
@@ -62,7 +69,10 @@
       <th>Start time</th>
       <th>End time</th>
       <th>Notes</th>
-      <th colspan="3"></th>
+      <th></th>
+      <% unless @role == "employee" %>
+      <th colspan="2"></th>
+      <%end%>
     </tr>
   </thead>
 
@@ -76,8 +86,10 @@
         <td><%= shift.end_time.strftime("%I:%M%p")  %></td>
         <td><%= shift.notes %></td>
         <td><%= link_to 'Show', shift %></td>
+        <% unless @role == "employee" %>
         <td><%= link_to 'Edit', edit_shift_path(shift) %></td>
         <td><%= link_to 'Destroy', shift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>

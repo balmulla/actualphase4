@@ -12,7 +12,7 @@ class AssignmentsController < ApplicationController
   def index
     @role = current_user_role
     if @role == "manager"
-      @assignments = Assignment.for_store(current_user.employee.current_assignment.store_id)
+      @assignments = Assignment.for_store(current_user.employee.current_assignment.store_id).for_role("employee")
     end
     if @role == "employee"
       @assignments = Assignment.for_employee(current_user.employee)
@@ -29,7 +29,7 @@ class AssignmentsController < ApplicationController
     @assignments = @assignments.for_employee(params[:for_employee]) if params[:for_employee].present?
     @assignments = @assignments.for_pay_level(params[:for_pay_level]) if params[:for_pay_level].present?
     @assignments = @assignments.for_role(params[:for_role]) if params[:for_role].present?
-    
+    @assignments.uniq
   end
 
   # GET /assignments/1
@@ -127,7 +127,7 @@ class AssignmentsController < ApplicationController
     
     def for_show
     @role = current_user_role
-      unless @role == "admin" || @assignment.employee == current_user.employee || (@role == "manager" && current_user.employee.current_assignment && @assignment.store_id == current_user.employee.current_assignment.store_id)
+      unless @role == "admin" || @assignment.employee == current_user.employee || (@role == "manager" && @assignment.employee.role == "employee" && current_user.employee.current_assignment && @assignment.store_id == current_user.employee.current_assignment.store_id)
         # redirect_to(root_url) 
         respond_to do |format|
           format.html { redirect_to root_url, notice: 'You are not authorised to do that' }

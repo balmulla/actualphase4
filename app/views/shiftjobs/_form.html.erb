@@ -13,17 +13,33 @@
     </div>
   <% end %>
 
+<%
+    @role = current_user_role 
+    if @role == "manager" && current_user.employee.current_assignment
+      @shifts = Shift.for_store(current_user.employee.current_assignment.store_id)
+      @shifts.each do |s|
+        if s.assignment.employee.role != "employee"
+          @shifts.delete(s)
+        end
+      end
+    end
+    if @role == "admin"
+      @shifts = Shift.all
+    end
+    
+    @jobs=Job.all
+%>
+
 <div class="col-md-6">
   <div class="field">
     <%= form.label :shift_id %>
-    <!--<%= form.number_field :shift_id %>-->
     <%= form.collection_select(:shift_id, @shifts, :id, :id) %>
   </div>
       
 
   <div class="field">
     <%= form.label :job_id %>
-    <%= form.number_field :job_id %>
+    <%= form.collection_select(:job_id, @jobs, :id, :id) %>
   </div>
 
   <div class="actions">

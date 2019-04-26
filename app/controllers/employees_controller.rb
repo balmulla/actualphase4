@@ -14,7 +14,7 @@ class EmployeesController < ApplicationController
   def index
     @role = current_user_role
     if @role == "manager" && current_user.employee.current_assignment
-      @employees = Employee.for_store(current_user.employee.current_assignment.store_id)
+      @employees = Employee.regulars.for_store(current_user.employee.current_assignment.store_id)
     else
       @employees = Employee.all
     end
@@ -27,11 +27,13 @@ class EmployeesController < ApplicationController
     @employees = @employees.admins(params[:admins]) if params[:admins].present?
     @employees = @employees.alphabetical(params[:alphabetical]) if params[:alphabetical].present?
     @employees = @employees.for_store(params[:for_store]) if params[:for_store].present?
+    
+    @employees= @employees.uniq
   end
   
-  def active
-    @active = Employee.active
-  end
+  # def active
+  #   @active = Employee.active
+  # end
   
   # GET /employees/1
   # GET /employees/1.json
@@ -156,7 +158,7 @@ class EmployeesController < ApplicationController
     
     def for_show
     @role = current_user_role
-      unless @role == "admin" || @employee == current_user.employee || (@role == "manager" && @employee.current_assignment && current_user.employee.current_assignment && @employee.current_assignment.store_id == current_user.employee.current_assignment.store_id)
+      unless @role == "admin" || @employee == current_user.employee || (@role == "manager" && @employee.role == "employee" && @employee.current_assignment && current_user.employee.current_assignment && @employee.current_assignment.store_id == current_user.employee.current_assignment.store_id)
         # redirect_to(root_url) 
         respond_to do |format|
           format.html { redirect_to root_url, notice: 'You are not authorised to do that' }

@@ -53,15 +53,30 @@ A:hover { COLOR: #A2A4A4; TEXT-DECORATION: none; font-weight: none }
 	    
 	    <!--navbar-->
 	 		<% if logged_in? %>
-	    <div class="row">
-    		<div class="col-md-2 bg-dark">
-		    </div>
-		    <div class="col-md-8 bg-dark">
-					<%= render :partial => "partials/nav" %>
-	  		</div>
-		    <div class="col-md-2 bg-dark">
-		    </div>
-		  </div>
+
+		    	<% @role = current_user_role %>
+				<% if @role == "employee" %>
+					<div class="row">
+    					<div class="col-md-3 bg-dark">
+		    			</div>
+		    			<div class="col-md-6 bg-dark">
+							<%= render :partial => "partials/nav3" %>
+						</div>
+		    			<div class="col-md-3 bg-dark">
+		    			</div>
+		  			</div>
+				<% else %>
+					<div class="row">
+    					<div class="col-md-2 bg-dark">
+		    			</div>
+		    			<div class="col-md-8 bg-dark">
+							<%= render :partial => "partials/nav" %>
+						</div>
+		    			<div class="col-md-2 bg-dark">
+		    			</div>
+		  			</div>
+				<% end %>
+	  		
 		   <% else %>
 	    <div class="row">
     		<div class="col-md-4 bg-dark">

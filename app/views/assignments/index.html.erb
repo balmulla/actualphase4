@@ -10,12 +10,18 @@
     <div class="dropdown-content">
       <a href="<%= assignments_path(:current => true) %>">Current</a>
       <a href="<%= assignments_path(:past => true) %>">Past</a>
-      <a href="<%= assignments_path(:by_store => true) %>">By store</a>
-      <a href="<%= assignments_path(:by_employee => true) %>">By employee</a>
+      <% unless @role == "employee" %>
+        <% unless @role == "manager" %>
+        <a href="<%= assignments_path(:by_store => true) %>">By store</a>
+        <%end%>
+        <a href="<%= assignments_path(:by_employee => true) %>">By employee</a>
+      <% end %>
       <a href="<%= assignments_path(:chronological => true) %>">Chronological</a>
     </div>
   </div>
-  
+
+  <% unless @role == "employee" %>  
+  <% unless @role == "manager" %>  
   <div class="dropdown">
     <button class="dropbtn">for store</button>
     <div class="dropdown-content">
@@ -24,12 +30,20 @@
       <% end %>
     </div>
   </div>
+  <% end %>
   
   <div class="dropdown">
     <button class="dropbtn">for employee</button>
     <div class="dropdown-content">
+      <% if @role == "admin" %>  
       <% Employee.all.each do |s| %>
       <a href="<%= assignments_path(:for_employee => s.id) %>"><%= s.id %></a>
+      <% end %>
+      <% end %>
+      <% if @role == "manager" %> 
+      <% Employee.regulars.for_store(current_user.employee.current_assignment.store_id).uniq.each do |s| %>
+      <a href="<%= assignments_path(:for_employee => s.id) %>"><%= s.id %></a>
+      <% end %>
       <% end %>
     </div>
   </div>
@@ -46,6 +60,7 @@
     </div>
   </div>
   
+  <% if @role == "admin" %>
   <div class="dropdown">
     <button class="dropbtn">for role</button>
     <div class="dropdown-content">
@@ -54,6 +69,8 @@
       <a href="<%= assignments_path(:for_role => "manager") %>"><%= "manager" %></a>
     </div>
   </div>
+  <%end%>
+  <%end%>
   
 <table class="table table-striped">
   <thead>
@@ -94,5 +111,15 @@
   <p> No assignments created yet!</p>
 <% end %>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
